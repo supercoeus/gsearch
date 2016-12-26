@@ -10,6 +10,9 @@ Ghost是一款出色的开源博客平台，小巧，易用，专注于写作，
 ## 截图
 ![截图](Screenshot.gif)
 
+## 在线体验
+[https://itobee.github.io/gsearch/docs/](https://itobee.github.io/gsearch/docs/)
+
 ## 使用示例
 [下载](https://github.com/itobee/gsearch/archive/master.zip)最新版的gsearch，将`dist`文件夹下的`libs`和`partials`文件夹复制到当前主题的根目录下（如果遇到同名文件夹，覆盖即可），并在当前主题的`default.hbs`文件中添加如下代码：
 
