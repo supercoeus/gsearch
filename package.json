@@ -1,0 +1,33 @@
+{
+    "name": "gsearch",
+    "version": "0.9.0",
+    "description": "jquery.gsearch.js是一款为Ghost量身打造的搜索插件，使Ghost轻松具有搜索功能。效果类似于SwifType，通过Ghost的rss实现搜索功能",
+    "keywords": [
+        "ghost search",
+        "swiftype",
+        "rss",
+        "jquery"
+    ],
+    "author": "ToBee",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/itobee/gsearch/issues"
+    },
+    "homepage": "https://github.com/itobee/gsearch#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/itobee/gsearch"
+    },
+    "devDependencies": {
+        "gulp": "*",
+        "gulp-load-plugins":"*",
+        "gulp-less": "*",
+        "gulp-autoprefixer": "*",
+        "gulp-rename": "*",
+        "gulp-clean-css": "*",
+        "gulp-uglify": "*",
+        "gulp-replace": "*",
+        "gulp-sequence":"*",
+        "del": "*"
+    }
+}

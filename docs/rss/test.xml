@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+        <title><![CDATA[Ghost 开源博客平台]]></title>
+        <description>
+            <![CDATA[Ghost 是一套基于 Node.js 构建的开源博客平台（Open source blogging platform），具有易用的书写界面和体验，博客内容默认采用 Markdown 语法书写，目标是取代臃肿的 Wordpress。]]></description>
+        <link>http://www.ghostchina.com/</link>
+        <generator>Ghost 0.7</generator>
+        <lastBuildDate>Mon, 26 Dec 2016 03:12:57 GMT</lastBuildDate>
+        <atom:link href="http://www.ghostchina.com/rss/" rel="self" type="application/rss+xml"/>
+        <ttl>60</ttl>
+        <item>
+            <title><![CDATA[Node.js v4 LTS 成为 Ghost 推荐版本]]></title>
+            <description><![CDATA[<p>从这周起，我们将 Ghost 推荐 Node.js 版本升级为 <strong>Node.js v4 LTS</strong>。</p>
+
+<p>我们这样做其实已经落后于计划了。然而，经过大量测试之后，我们确信 Ghost 可以在 Node.js v4 平台上流畅的运行并且内存消耗比原来也减少了。目前，<a href="https://ghost.org/ghost-pro-vs-self-hosting/">Ghost(Pro)</a> 上托管的所有博客都已经运行在 Node.js v4 LTS 平台了，而且升级过程中零问题。</p>
+
+<h3 id="nodejs">为什么要升级 Node.js 版本？</h3>
+
+<p>将 Ghost(Pro) 上托管的博客全部升级之后，我们发现每个 Ghost 博客所消耗的内存都小于 100mb （注：根据你所使用的主题、内容数量、流量和运行环境的不同会有一些差异）。</p>
+
+<p><a href="https://github.com/nodejs/LTS">Node.js LTS</a></p>]]></description>
+            <link>http://www.ghostchina.com/moving-to-node-js-v4-lts/</link>
+            <guid isPermaLink="false">81a7b096-9c20-479d-b9fe-29643a0a52d3</guid>
+            <dc:creator><![CDATA[王赛]]></dc:creator>
+            <pubDate>Tue, 26 Jul 2016 01:54:51 GMT</pubDate>
+            <content:encoded><![CDATA[<p>从这周起，我们将 Ghost 推荐 Node.js 版本升级为 <strong>Node.js v4 LTS</strong>。</p>
+
+<p>我们这样做其实已经落后于计划了。然而，经过大量测试之后，我们确信 Ghost 可以在 Node.js v4 平台上流畅的运行并且内存消耗比原来也减少了。目前，<a href="https://ghost.org/ghost-pro-vs-self-hosting/">Ghost(Pro)</a> 上托管的所有博客都已经运行在 Node.js v4 LTS 平台了，而且升级过程中零问题。</p>
+
+<h3 id="nodejs">为什么要升级 Node.js 版本？</h3>
+
+<p>将 Ghost(Pro) 上托管的博客全部升级之后，我们发现每个 Ghost 博客所消耗的内存都小于 100mb （注：根据你所使用的主题、内容数量、流量和运行环境的不同会有一些差异）。</p>
+
+<p><a href="https://github.com/nodejs/LTS">Node.js LTS 规划</a> 中明确给出了 Node.js v0.10.x 版本的生命周期截止到 2016 年 10 月 1 号。Ghost 将跟随这一规划，也就是说下一次版本升级或者 10 月 1 号之后将不再支持 Node.js v0.10.x 版本。对于 Node.js 0.12.x 版本的支持也将在 2016 年 12 月 31 日截止。 </p>
+
+<p>如果你是在自己的服务器上安装的 Ghost，并且计划未来三个月内升级 Ghost 版本，我们建议 Node.js 和 Ghost 的升级分别独立进行，这样便于查找问题。</p>
+
+<h3 id="nodejs">如何升级 Node.js</h3>
+
+<p>将低版本的 Node.js 升级到 v4 版本分以下四个步骤：</p>
+
+<ol>
+<li>备份 Ghost！  </li>
+<li>升级 Node.js 版本  </li>
+<li>在 Ghost 安装目录内执行 <code>npm install --production</code> 命令，确保二进制依赖包是针对 Node.js v4 LTS 版本编译的  </li>
+<li>重启 Ghost</li>
+</ol>
+
+<p>如果你正在使用 Digital Ocean 的 droplet，你可以参照 <a href="https://www.digitalocean.com/community/questions/how-to-upgrade-node-js-on-older-ghost-droplets">excellent Q &amp; A post</a> 这篇文章了解如何一键安装 Ghost 并同时升级 Node.js。</p>
+
+<h3 id="">更多细节</h3>
+
+<p>参考资料如下：</p>
+
+<ul>
+<li>Node.js <a href="https://github.com/nodejs/LTS">官方 LTS 规划</a></li>
+<li>Ghost's <a href="http://support.ghost.org/supported-node-versions/">被支持的 Node.js 版本</a></li>
+<li>详细解释为何升级 Node.js <a href="https://github.com/TryGhost/Ghost/issues/7098">on GitHub</a></li>
+</ul>
+
+<hr>
+
+<p>原文地址：<a href="https://dev.ghost.org/node-4/">https://dev.ghost.org/node-4/</a></p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Ghost 桌面版 APP 正式发布，能同时管理多个 Ghost 博客]]></title>
+            <description><![CDATA[<p>虽然通过浏览器管理 Ghost 博客虽然很方便，但是在多个 tab 之间切换有时候也会很麻烦，嗯，如果能有一个独立的 app 应该使用起来会更爽一些！</p>
+
+<p>今天的主角来了，Ghost 桌面版 APP -- Ghost Desktop！</p>
+
+<p>目前，Ghost Desktop 还处于早期阶段，但是已经是一个全功能版本了，并且 Ghost Desktop 运行良好，支持自动更新，已经完全支持 Mac、Windows 和 Linux 平台了。补充一下，Ghost Desktop 是<a href="https://github.com/tryghost/ghost-desktop">完全开源</a>的（这还用说吗？）。</p>
+
+<p>其实 Ghost Desktop 于数周前就已经开放给大家预览了。</p>
+
+<p>众所周知，Ghost 是一个有非盈利组织支持的开源项目。Ghost Desktop 由志愿者</p>]]></description>
+            <link>
+                http://www.ghostchina.com/ghost-zhuo-mian-ban-app-geng-xin-neng-gou-tong-shi-guan-li-duo-ge-ghost-bo-ke/
+            </link>
+            <guid isPermaLink="false">9007d47f-cdc3-4b8a-a88f-67af2712f0b3</guid>
+            <dc:creator><![CDATA[王赛]]></dc:creator>
+            <pubDate>Thu, 28 Apr 2016 02:14:23 GMT</pubDate>
+            <media:content url="http://static.ghostchina.com/image/4/45/e447fa21190690b28f1957d5937f4.png"
+                           medium="image"/>
+            <content:encoded><![CDATA[<img src="http://static.ghostchina.com/image/4/45/e447fa21190690b28f1957d5937f4.png" alt="Ghost 桌面版 APP 正式发布，能同时管理多个 Ghost 博客"><p>虽然通过浏览器管理 Ghost 博客虽然很方便，但是在多个 tab 之间切换有时候也会很麻烦，嗯，如果能有一个独立的 app 应该使用起来会更爽一些！</p>
+
+<p>今天的主角来了，Ghost 桌面版 APP -- Ghost Desktop！</p>
+
+<p>目前，Ghost Desktop 还处于早期阶段，但是已经是一个全功能版本了，并且 Ghost Desktop 运行良好，支持自动更新，已经完全支持 Mac、Windows 和 Linux 平台了。补充一下，Ghost Desktop 是<a href="https://github.com/tryghost/ghost-desktop">完全开源</a>的（这还用说吗？）。</p>
+
+<p>其实 Ghost Desktop 于数周前就已经开放给大家预览了。</p>
+
+<p>众所周知，Ghost 是一个有非盈利组织支持的开源项目。Ghost Desktop 由志愿者 Felix Rieseberg 独立开发的，并且他还是一位微软的开源布道者。</p>
+
+<p>官方下载地址（且慢点击，先看下面）：<a href="https://ghost.org/downloads/">https://ghost.org/downloads/</a></p>
+
+<p>由于 <strong>众所周知</strong> 的原因，某些网站或服务在国内是不存在的，这其中就包括 Amazon 的云存储，悲伤的是 Github 用的就是 Amazon 的云存储，更悲伤的是 Ghost Desktop 利用的是 Github 提供的下载，说白了，你在国内还真下载不了。所以 GhostChina 把安装包搬运到墙内给大家提供一点儿方便：</p>
+
+<ul>
+<li>Windows(For Windows 7 &amp; newer): <a href="http://dl.ghostchina.com/desktop/ghost-desktop-0.3.2-windows-setup.exe">http://dl.ghostchina.com/desktop/ghost-desktop-0.3.2-windows-setup.exe</a></li>
+<li>Mac(For OS X 10.9 &amp; newer): <a href="http://dl.ghostchina.com/desktop/ghost-desktop-0.3.2-osx.zip">http://dl.ghostchina.com/desktop/ghost-desktop-0.3.2-osx.zip</a></li>
+<li>Linux(For Ubuntu 64-bit): <a href="http://dl.ghostchina.com/desktop/ghost-desktop-0.3.2-debian.deb">http://dl.ghostchina.com/desktop/ghost-desktop-0.3.2-debian.deb</a></li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[为 Ubuntu 和 Debian 安装最新版本的 Node.js]]></title>
+            <description><![CDATA[<p>运行 <a href="http://www.ghostchina.com/">Ghost</a> 必须要安装 <a href="https://nodejs.org/">Node.js</a>。但是 Ubuntu 或 Debian 的软件仓库中的 Node.js 更新较慢，甚至只能等到新版本发布才能有最新的 Node.js 用。下面我们说一下从 <a href="https://github.com/nodesource/distributions">NodeSource</a> 提供的仓库中安装最新版本的 Node.js。</p>
+
+<h2 id="">支持的操作系统版本</h2>
+
+<p>被支持的 Ubuntu 版本：</p>
+
+<ul>
+<li>Ubuntu 12.04 LTS (Precise Pangolin)</li>
+<li>Ubuntu 14.04 LTS (Trusty Tahr)</li>
+<li>Ubuntu 15.04 (Vivid Vervet)</li>
+<li>Ubuntu 15.10 (Wily Werewolf) [For Node</li></ul>]]></description>
+            <link>http://www.ghostchina.com/install-nodejs-of-latest-version-in-ubuntu-and-debian/</link>
+            <guid isPermaLink="false">6d9ac56e-83ff-45c3-b1b7-df18fb91eea5</guid>
+            <dc:creator><![CDATA[王赛]]></dc:creator>
+            <pubDate>Tue, 22 Mar 2016 16:08:17 GMT</pubDate>
+            <content:encoded><![CDATA[<p>运行 <a href="http://www.ghostchina.com/">Ghost</a> 必须要安装 <a href="https://nodejs.org/">Node.js</a>。但是 Ubuntu 或 Debian 的软件仓库中的 Node.js 更新较慢，甚至只能等到新版本发布才能有最新的 Node.js 用。下面我们说一下从 <a href="https://github.com/nodesource/distributions">NodeSource</a> 提供的仓库中安装最新版本的 Node.js。</p>
+
+<h2 id="">支持的操作系统版本</h2>
+
+<p>被支持的 Ubuntu 版本：</p>
+
+<ul>
+<li>Ubuntu 12.04 LTS (Precise Pangolin)</li>
+<li>Ubuntu 14.04 LTS (Trusty Tahr)</li>
+<li>Ubuntu 15.04 (Vivid Vervet)</li>
+<li>Ubuntu 15.10 (Wily Werewolf) [For Node >= 4.2.x]</li>
+</ul>
+
+<p>被支持的 Debian 版本：</p>
+
+<ul>
+<li>Debian 7 (wheezy)</li>
+<li>Debian 8 / stable (jessie)</li>
+<li>Debian testing (stretch, aliased to jessie)</li>
+<li>Debian unstable (sid)</li>
+</ul>
+
+<h2 id="">安装步骤</h2>
+
+<p>Ghost 目前支持 <code>0.10.*</code>、<code>0.12.*</code> 和 <code>&gt;=4.2 &lt;5.* (LTS)</code> 版本的 Node.js，推荐的是 <code>&gt;0.10.40 (最新版本)</code>。详细说明请看这里：<a href="http://support.ghost.org/supported-node-versions/">http://support.ghost.org/supported-node-versions/</a></p>
+
+<p><strong>根据我们的安装经验，推荐安装 4.x（LTS）版本的 Node.js。</strong></p>
+
+<h3 id="nodejsv4x">安装 Node.js v4.x</h3>
+
+<p><strong>Ubuntu 系统</strong></p>
+
+<pre><code class="language-bash">curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+</code></pre>
+
+<p><strong>Debian 系统。以 root 权限执行下列指令</strong></p>
+
+<pre><code class="language-bash">curl -sL https://deb.nodesource.com/setup_4.x | bash -
+apt-get install -y nodejs
+</code></pre>
+
+<h3 id="nodejsv010">安装 Node.js v0.10</h3>
+
+<p><strong>Ubuntu 系统</strong></p>
+
+<pre><code class="language-bash">curl -sL https://deb.nodesource.com/setup_0.10 | sudo -E bash -
+sudo apt-get install -y nodejs
+</code></pre>
+
+<p><strong>Debian 系统。以 root 权限执行下列指令</strong></p>
+
+<pre><code class="language-bash">curl -sL https://deb.nodesource.com/setup_0.10 | bash -
+apt-get install -y nodejs
+</code></pre>
+
+<h3 id="nodejsv012">安装 Node.js v0.12</h3>
+
+<p><strong>Ubuntu 系统</strong></p>
+
+<pre><code class="language-bash">curl -sL https://deb.nodesource.com/setup_0.12 | sudo -E bash -
+sudo apt-get install -y nodejs
+</code></pre>
+
+<p><strong>Debian 系统。以 root 权限执行下列指令</strong></p>
+
+<pre><code class="language-bash">curl -sL https://deb.nodesource.com/setup_0.12 | bash -
+apt-get install -y nodejs
+</code></pre>
+
+<h3 id="nodejsv5x">安装 Node.js v5.x</h3>
+
+<p><strong>注意：v5.x 的 Node.js 不被 Ghost 支持，以下安装介绍只为了完整介绍 Node.js 各个版本的安装！</strong></p>
+
+<p><strong>Ubuntu 系统</strong></p>
+
+<pre><code class="language-bash">curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
+sudo apt-get install -y nodejs
+</code></pre>
+
+<p><strong>Debian 系统。以 root 权限执行下列指令</strong></p>
+
+<pre><code class="language-bash">curl -sL https://deb.nodesource.com/setup_5.x | bash -
+apt-get install -y nodejs
+</code></pre>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Ghost 0.7.4 正式发布]]></title>
+            <description>
+                <![CDATA[Ghost 0.7.4 中文版本正式发布了。主要提升了开放 API 的稳定性，并且支持 Node 4.2 。Ghost 中文版完整安装包让你免去安装依赖包时被墙的烦恼。]]></description>
+            <link>http://www.ghostchina.com/ghost-0-7-4-released/</link>
+            <guid isPermaLink="false">e7797557-a55d-41b0-a545-54449bf96180</guid>
+            <category><![CDATA[新版本发布]]></category>
+            <category><![CDATA[Ghost]]></category>
+            <dc:creator><![CDATA[王赛]]></dc:creator>
+            <pubDate>Mon, 28 Dec 2015 16:01:18 GMT</pubDate>
+            <media:content url="http://static.ghostchina.com/image/a/21/de1b2911072f5a4eff82abdb62632.png"
+                           medium="image"/>
+            <content:encoded><![CDATA[<img src="http://static.ghostchina.com/image/a/21/de1b2911072f5a4eff82abdb62632.png" alt="Ghost 0.7.4 正式发布"><p>紧随 Ghost 官方脚步，Ghost 0.7.4 中文正式版发布了！这一版本包含了自 Ghost 0.7.3 版本发布以来所修正的 bug，主要是针对开放 API 功能的改进。</p>
+
+<h2 id="071072073">0.7.1、0.7.2、0.7.3 这些版本哪去了？</h2>
+
+<p>从 Ghost 0.7.0 版本发布以来，Ghost 中文网并没有跟进发布 0.7.1、0.7.2 以及 0.7.3 版本，主要是我们不希望让这么多、这么密集发布的版本给大家带来疲于升级的困扰。</p>
+
+<p>首先说 0.7.1 版本，这一版本主要是针对 0.7.0 版本的 bug 修正，并且没有太大的 bug，也没有太多新东西，鉴于我们已经发布过 0.7.0 版本了，因此把 0.7.1 版本就捂下来了。</p>
+
+<p>0.7.2 版本开始，Ghost 团队引入了开放 API 和 <code>{{#get}}</code> 助手函数，并且支持 Node v4.2 ，不过，正是由于引入了开放 API ，致使 Ghost 源码变动较大，自然出 bug 的几率更多，不适合过早尝试。</p>
+
+<p>0.7.3 版本时 12 月 16 日发布的，主要是修复 0.7.2 版本的 bug。这个版本命太短了，刚过一周（也就是 12 月 22 日） 0.7.4 版本就发布了。</p>
+
+<h2 id="">主要改进综述</h2>
+
+<ul>
+<li>[新增] 通过 <code>@blog</code> 全局变量可以获取页面地址以及分页数据（posts<em>per</em>page）</li>
+<li>[新增] <code>{{#get}}</code> 助手函数（测试中）</li>
+<li>[新增] 在主题文件中通过 Ajax 访问开发 API （测试中）</li>
+<li>[新增] 支持 Node v4.2</li>
+<li>[新增] 在博文设置页面可以通过拖拽改变标签的顺序</li>
+<li>[新增] 在标签、用户、博文的 URL 末尾添加 <code>/edit/</code> 可以快速进入编辑页面</li>
+<li>[改进] 搜索结果中包含标签</li>
+</ul>
+
+<h2 id="">下载地址</h2>
+
+<p><a href="http://www.ghostchina.com/download/">http://www.ghostchina.com/download/</a></p>
+
+<p><strong>强烈建议大家下载并使用 <a href="http://www.ghostchina.com/download/">Ghost 0.7.4</a> 中文版完整集成包，以免 <code>npm install --production</code> 安装依赖包时被墙！</strong></p>
+
+<p>如果你喜欢用英文原版？可以下载 中文集成包 和 英文原版安装包，首先解压 中文版集成包，然后再解压 英文版安装包 覆盖 中文版 即可，两个版本完全兼容，任意切换，同时还能免去安装依赖包时被墙的麻烦。</p>
+
+<h3 id="node">关于 Node 版本</h3>
+
+<p>官方建议使用 Node 0.10.x 版本，并且也支持 0.12.x 和 4.2.x 版本。从我们的测试来看，这三个版本都没有问题，如果你希望使用新版本 Node
+的话，我们建议使用 4.2.x 。</p>
+
+<h3 id="sqlite">关于 sqlite</h3>
+
+<p>Ghost 默认使用 sqlite 数据库存储数据。</p>
+
+<p>Ghost 所依赖的 sqlite 包需要从国外服务器上（亚马逊的云存储服务）下载原生插件，不过你知道的，国外好多服务器都被墙了，因此在国内经常遇到通过 <code>npm install --production</code> 安装依赖包时出错，即使你替换成国内的 npm 镜像也没用，因为 sqlite 的原生插件没有通过 npm 分发。</p>
+
+<p>鉴于上述原因，我们一直都在中文集成安装包中包含了 sqlite 针对 Linux（X64）、Windows（X64 和 IA32）、Mac（X64） 三个操作系统以及每个操作系统上针对 Node 0.10.x、0.12.x 和 4.2.x 三个版本的原生插件，即总共 12 个原生插件。这样，不管你在哪个操作系统、用的是哪个 Node
+版本，都可以无障碍运行 Ghost 。</p>
+
+<h2 id="">如何升级</h2>
+
+<p>对于所有自己安装 Ghost 的用户，建议首先备份数据库，以免升级失败丢失数据。</p>
+
+<p><strong>升级步骤：</strong></p>
+
+<ol>
+<li>首先 <a href="https://ghost.org/download/">下载 Ghost 0.7.4</a> ，然后将其解压缩到一个新目录（千万不要直接覆盖老版本！）  </li>
+<li>进入新版本所在目录，复制 <code>config.sample.js</code> 文件并命名为 <code>config.js</code>；然后参照前一个版本的配置文件修改新的 <code>config.js</code>，主要是配置域名、邮箱、数据库、云存储；  </li>
+<li>将上一个版本中的 <code>contents</code> 目录整个复制过来，覆盖即可。主要是主题和图片。  </li>
+<li>执行 <code>npm install --production</code> 安装所有依赖包。<strong>如果你使用的是中文版完整安装包的话无需这一步操作了！</strong>  </li>
+<li>将老版本的 Ghost 关闭，启动新版本。检查一下是否有错误提示。  </li>
+<li>启动浏览器，打开你的网站。如果你是全新安装的话，就会看到安装界面，一步步来就行了。如果你是从老版本升级的话，直接就进入你的网站了，你可以进后台看看新后台界面吧。</li>
+</ol>
+
+<blockquote>
+  <p>注意：在第三步执行 <code>npm install --production</code> 时，可能会因为墙的原因导致安装失败，建议下载中文完整版安装包。如果你不希望使用中文版的话可以用英文原版直接覆盖中文版，这样就能省去安装依赖包了。</p>
+</blockquote>
+
+<p>提示：如果你没有随着 Ghost 版本逐个升级的话也没关系，凡是 0.4.2 版本之后都可以升级到最新版。</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Ghost 0.7.0 正式发布]]></title>
+            <description><![CDATA[<p><img src="http://static.ghostchina.com/image/2/50/0a96874d2150820509ec84099a154.png" alt="Ghost 0.7.0 后台截图"></p>
+
+<p><a href="http://www.ghostchina.com/download/">Ghost 0.7.0</a> 已经正式发布了！此版本主要对后台 UI 的重构，既包含重新设计，也包含底层功能的重大改进。0.7.0 还为即将到来的 API 做了很多铺垫工作。</p>
+
+<h2 id="ghost070">Ghost 0.7.0 的主要改进</h2>
+
+<ul>
+<li><strong>[新增]</strong> 设计新后台界面</li>
+<li><strong>[新增]</strong> 后台能够搜索博文和用户</li>
+<li><strong>[新增]</strong> 安装流程（针对新博客）</li>
+<li><strong>[改进]</strong> jQuery 不再包含在 <code>{{ghost_foot}}</code> 输出中</li>
+<li><strong>[改进]</strong> 保存标签的添加顺序</li>
+<li><strong>[改进]</strong> <code>{{foreach}}</code> 助手函数</li>
+<li><strong>[修复]</strong> <code>{{tags}}</code> 和 <code>{{author}}</code> 不出现在用于获取前一篇/后一篇博文的助手函数中</li>
+<li><strong>[修复]</strong> 多个涉及 RSS 链接的问题</li>
+<li><strong>[修复]</strong></li></ul>]]></description>
+            <link>http://www.ghostchina.com/ghost-0-7-0-released/</link>
+            <guid isPermaLink="false">4e6e0f6e-bd6d-46b1-b258-751744fd40e7</guid>
+            <category><![CDATA[Ghost]]></category>
+            <category><![CDATA[新版本发布]]></category>
+            <category><![CDATA[Ghost 0.7 版本]]></category>
+            <dc:creator><![CDATA[王赛]]></dc:creator>
+            <pubDate>Sun, 06 Sep 2015 20:31:06 GMT</pubDate>
+            <content:encoded><![CDATA[<p><img src="http://static.ghostchina.com/image/2/50/0a96874d2150820509ec84099a154.png" alt="Ghost 0.7.0 后台截图"></p>
+
+<p><a href="http://www.ghostchina.com/download/">Ghost 0.7.0</a> 已经正式发布了！此版本主要对后台 UI 的重构，既包含重新设计，也包含底层功能的重大改进。0.7.0 还为即将到来的 API 做了很多铺垫工作。</p>
+
+<h2 id="ghost070">Ghost 0.7.0 的主要改进</h2>
+
+<ul>
+<li><strong>[新增]</strong> 设计新后台界面</li>
+<li><strong>[新增]</strong> 后台能够搜索博文和用户</li>
+<li><strong>[新增]</strong> 安装流程（针对新博客）</li>
+<li><strong>[改进]</strong> jQuery 不再包含在 <code>{{ghost_foot}}</code> 输出中</li>
+<li><strong>[改进]</strong> 保存标签的添加顺序</li>
+<li><strong>[改进]</strong> <code>{{foreach}}</code> 助手函数</li>
+<li><strong>[修复]</strong> <code>{{tags}}</code> 和 <code>{{author}}</code> 不出现在用于获取前一篇/后一篇博文的助手函数中</li>
+<li><strong>[修复]</strong> 多个涉及 RSS 链接的问题</li>
+<li><strong>[修复]</strong> 非常早版本的升级路径</li>
+</ul>
+
+<p>可以在这里查看<a href="https://gist.github.com/ErisDS/314914b570c4233eea8c">完整的升级日志</a> 。</p>
+
+<h2 id="">下载地址</h2>
+
+<p><a href="http://www.ghostchina.com/download/">http://www.ghostchina.com/download/</a></p>
+
+<p><strong>强烈建议大家下载并使用 <a href="http://www.ghostchina.com/download/">Ghost 0.7.0</a> 中文版完整集成包，以免 <code>npm install --production</code> 安装依赖包时被墙！</strong></p>
+
+<p>如果你喜欢用英文原版？可以下载 中文集成包 和 英文原版安装包，首先解压 中文版集成包，然后再解压 英文版安装包 覆盖 中文版 即可，两个版本完全兼容，任意切换，同时还能免去安装依赖包时被墙的麻烦。</p>
+
+<h2 id="">如何升级</h2>
+
+<p>对于所有自己安装 Ghost 的用户，建议首先备份数据库，以免升级失败丢失数据。</p>
+
+<p><strong>升级步骤：</strong></p>
+
+<ol>
+<li>首先 <a href="https://ghost.org/download/">下载 Ghost 0.7.0</a> ，然后将其解压缩到一个新目录（千万不要直接覆盖老版本！）  </li>
+<li>进入新版本所在目录，复制 <code>config.sample.js</code> 文件并命名为 <code>config.js</code>；然后参照前一个版本的配置文件修改新的 <code>config.js</code>，主要是配置域名、邮箱、数据库、云存储；  </li>
+<li>将上一个版本中的 <code>contents</code> 目录整个复制过来，覆盖即可。主要是主题和图片。  </li>
+<li>执行 <code>npm install --production</code> 安装所有依赖包。如果你使用的是中文版完整安装包的话无需这一步操作了！  </li>
+<li>将老版本的 Ghost 关闭，启动新版本。检查一下是否有错误提示。  </li>
+<li>启动浏览器，打开你的网站。如果你是全新安装的话，就会看到安装界面，一步步来就行了。如果你是从老版本升级的话，直接就进入你的网站了，你可以进后台看看新后台界面吧。</li>
+</ol>
+
+<blockquote>
+  <p>注意：在第三步执行 <code>npm install --production</code> 时，可能会因为墙的原因导致安装失败，建议下载中文完整版安装包。如果你不希望使用中文版的话可以用英文原版直接覆盖中文版，这样就能省去安装依赖包了。</p>
+</blockquote>
+
+<p>提示：如果你没有随着 Ghost 版本逐个升级的话也没关系，凡是 0.4.2 版本之后都可以升级到最新版。</p>
+
+<h2 id="">详细说明</h2>
+
+<p>从上一个版本到现在，总计有 585 个修改，主要是围绕后台界面的。我们还将 Sass 替换为了 Myth（Sass 和 Myth 都是 CSS 预处理语言+工具）。</p>
+
+<h3 id="api">主题 API 的变化</h3>
+
+<p>此版本包含了主题 API 的多个改进。最重要的是 jQuery 链接 <strong>不再</strong> 通过 <code>{{ghost_foot}}</code> 助手输出了。详细说明请参考这里 <a href="http://www.ghostchina.com/no-more-jquery-in-ghost_foot-helper-of-ghost-0-7/">Ghost 0.7 中 {{ghost_foot}} 助手函数将不再输出 jQuery</a> 。简短来说，如果你是从老版本升级的话，对你没有影响，如果你自己开发 Ghost 主题的话，需要对主题做相应修改。</p>
+
+<blockquote>
+  <p>对于一直在使用 Ghost 中文网所维护的中文版的用户：我们从 0.5.9 版本开始为 Ghost 中文版添加了一个 <code>jquery=false</code> 的参数用于<a href="http://www.ghostchina.com/disable-jquery-link-in-ghost_foot-helper/">抑制 jQuery 的输出</a>，如果你使用了这个参数，丝毫没有影响。</p>
+</blockquote>
+
+<p><code>{{next_post}}</code> 和 <code>{{prev_post}}</code> 助手能够正确输出 <code>{{author}}</code> 和 <code>{{tags}}</code> 了。<code>{{foreach}}</code> 助手也被升级并支持块级参数了，就像 Handlebars 内置的 <code>{{each}}</code> 助手一样，并且还支持 <code>@number</code> 变量。最后，我们还升级了 <code>{{tags}}</code> 助手，现在可以按照添加标签时的顺序原样输出标签了。这些改变将来与 <code>{{#get}}</code> 助手联合使用时能够实现更多功能，但是不是道什么时候发布下一个版本，期待吧！</p>
+
+<p>请参考 <a href="http://themes.ghost.org/docs/changelog">主题 API 文档</a> 了解更详细的内容。涉及主题相关的文档正在被频繁更新，会有更多详细用法和实例给出来的。</p>
+
+<p>如果你在苦等 <code>{{#get}}</code>助手，你可以帮我们测试并提交反馈，好让它尽快发布。详细说明在 <a href="https://github.com/TryGhost/Ghost/pull/5608">这里</a>，你还可以加入 <a href="https://ghost.org/slack">slack</a> 上的 #themes 频道答疑解惑。</p>
+
+<h2 id="">致谢</h2>
+
+<p>This release was lovingly crafted by John O'Nolan, Hannah Wolfe, Kevin Ansfield, cobbspur, Austin Burdine, Jason Williams, Fabian Becker, Sebastian Gierlinger, John O'Mahoney, Matt Enlow, Alex Kleissner, Joe Wegner, Kowsheek Mahmood, Rem Zolotykh, Robert Jackson, Maurice Williams, Łukasz Kliś, Michael Auer, Nazar Gargol, Rafael Corrêa Gomes, hwdsl2, Roy van Kaathoven, Samuel Goodwin, BlueHatbRit, Sem, Augustus Yuan, Joe Cannatti, David Balderston, hoxoa, Clay Diffrient and Chris Maddox.</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Ghost 0.7 中 {{ghost_foot}} 助手函数将不再输出 jQuery]]></title>
+            <description><![CDATA[<blockquote>
+  <p><code>{{ghost_foot}}</code> 助手函数将不再输出 jQuery 链接了。</p>
+</blockquote>
+
+<p>从 Ghost 第一个版本开始， <code>{{ghost_foot}}</code> 助手函数默认都会输出一个 jQuery 文件链接，并且这个文件还是本地存储的。最开始 Ghost 团队觉得这是一件对所有主题开发者有意义的事情，因此就把这个功能加入 Ghost 核心代码里了。但是，现在越来越觉得这是一个非常糟糕的决定！因为根本没有给开发者提供去掉 jQeury 的后门。这也就有了 Ghost 中文网在发布的各个 Ghost 中文版中为 <code>{{ghost_foot}}</code> 助手增加了一个开关 <code>jquery=false</code> 用于<a href="http://www.ghostchina.com/disable-jquery-link-in-ghost_foot-helper/">去除 jQuery</a>。</p>
+
+<p>Ghost 团队总算意识到这个 shit 决定了，在即将发布的 0.7 版本中将不再输出 jQuery 链接。</p>
+
+<p>对于目前已经存在的 Ghost</p>]]></description>
+            <link>http://www.ghostchina.com/no-more-jquery-in-ghost_foot-helper-of-ghost-0-7/</link>
+            <guid isPermaLink="false">8b85dea4-fbc4-4d95-88c6-f5b5717a7323</guid>
+            <category><![CDATA[Ghost]]></category>
+            <category><![CDATA[助手函数]]></category>
+            <category><![CDATA[jQuery]]></category>
+            <dc:creator><![CDATA[王赛]]></dc:creator>
+            <pubDate>Sat, 29 Aug 2015 07:17:34 GMT</pubDate>
+            <content:encoded><![CDATA[<blockquote>
+  <p><code>{{ghost_foot}}</code> 助手函数将不再输出 jQuery 链接了。</p>
+</blockquote>
+
+<p>从 Ghost 第一个版本开始， <code>{{ghost_foot}}</code> 助手函数默认都会输出一个 jQuery 文件链接，并且这个文件还是本地存储的。最开始 Ghost 团队觉得这是一件对所有主题开发者有意义的事情，因此就把这个功能加入 Ghost 核心代码里了。但是，现在越来越觉得这是一个非常糟糕的决定！因为根本没有给开发者提供去掉 jQeury 的后门。这也就有了 Ghost 中文网在发布的各个 Ghost 中文版中为 <code>{{ghost_foot}}</code> 助手增加了一个开关 <code>jquery=false</code> 用于<a href="http://www.ghostchina.com/disable-jquery-link-in-ghost_foot-helper/">去除 jQuery</a>。</p>
+
+<p>Ghost 团队总算意识到这个 shit 决定了，在即将发布的 0.7 版本中将不再输出 jQuery 链接。</p>
+
+<p>对于目前已经存在的 Ghost 主题和已经上线的 Ghost 博客来说，这个改变可能造成不小的麻烦。因此，Ghost 团队决定采用如下方式帮大家平滑过渡：<strong>对于新创建的博客不再输出 jQeury 链接</strong>；对已经在线上运行的博客，将在 <a href="http://support.ghost.org/use-code-injection/">插入代码</a> 功能页面自动填充一个引用 jQuery 的 <code>&lt;script&gt;</code> 标签，这个标签将会随着 <code>{{ghost_foot}}</code> 助手输出，也就是说比以前的输出方式绕了个弯，但是对于用户来说可能没有太明显的感知。</p>
+
+<p>关于这个问题的讨论可以看这里 <a href="https://github.com/TryGhost/Ghost/issues/5298">issue on GitHub</a>。</p>
+
+<h2 id="">如何升级现有主题</h2>
+
+<p>Ghost 0.7 很快就要发布了，升级时一定要确认做了如下准备工作：</p>
+
+<p>建议大家看一下自己的主题源码，以 <code>casper-zh</code> 主题为例，在 <code>contents/themes/casper-zh/</code> 目录下有一个 <code>default.hbs</code> 文件，打开这个文件，看看文件末尾是否有明显的 jQuery 链接，如果没有，那就是依赖 <code>{{ghost_foot}}</code> 输出了，建议大家手动添加一个 jQuery 链接，比如使用 <a href="http://www.bootcdn.cn/jquery/">BootCDN</a> 提供的免费 CDN 服务：</p>
+
+<pre><code>&lt;script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;
+</code></pre>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Ghost 0.7 即将发布，高清大图提前看]]></title>
+            <description><![CDATA[<p>Ghost 官方在 18 号的会议记录上透露了 Ghost 0.7 版本可能会在这个月底前发布，也就是说 Github 仓库里的代码不会有太大变化了。周末抽时间把 master 分支上的代码下载、编译、安装起来，截几张高清图，360 度无死角透视一下最新版的真面目吧！</p>
+
+<h2 id="">安装界面</h2>
+
+<h3 id="ghost">Ghost 欢迎您 :)</h3>
+
+<p><img src="http://static.ghostchina.com/image/b/72/d5dec6bbe8524be00f8529f513b16.png" alt="Ghost 欢迎您 :)"></p>
+
+<h3 id="">创建第一个账户，也就是博客的拥有者</h3>
+
+<p><img src="http://static.ghostchina.com/image/f/bd/53a2b223367c18942674babf07723.png" alt="创建第一个账户，也就是博客的拥有者"></p>
+
+<h3 id="">邀请好友组团开博</h3>
+
+<p><img src="http://static.ghostchina.com/image/e/63/2937a98938c019ecb09eb5252402f.png" alt="邀请好友组团开博"></p>
+
+<h2 id="">安装完毕，进入后台</h2>
+
+<h3 id="">后台全景布局</h3>
+
+<p><img src="http://static.ghostchina.com/image/4/93/88a5549e1c19e61e4e4777f3ff949.png" alt="后台全景布局"></p>
+
+<h3 id="">左侧功能栏可以隐藏</h3>
+
+<p><img src="http://static.ghostchina.com/image/6/14/af1bccddb1b73dc45dd800b51b49e.png" alt="左侧功能栏可以隐藏"></p>
+
+<h3 id="">博文编辑页</h3>
+
+<p><img src="http://static.ghostchina.com/image/6/32/0c11428d2077f9271209968c15c22.png" alt="博文编辑页"></p>
+
+<h3 id="">博文设置</h3>
+
+<p><img src="http://static.ghostchina.com/image/0/a3/0d9751155a20c2e8dd1c3e21eb52b.png" alt="博文设置"></p>
+
+<h3 id="">用户管理</h3>
+
+<p><img src="http://static.ghostchina.com/image/7/99/020f5c29e5d310e0e964180790ed3.png" alt="用户管理"></p>
+
+<h3 id="">用户资料管理</h3>
+
+<p><img src="http://static.ghostchina.com/image/c/99/39b1ae11459a7008002b71fb7dcbc.png" alt="用户资料管理"></p>
+
+<h3 id="">全局设置</h3>
+
+<p><img src="http://static.ghostchina.com/image/2/33/03b3006dd7aa76d916bc1d0a16eec.png" alt="全局设置"></p>
+
+<h3 id="">导航设置</h3>
+
+<p><img src="http://static.ghostchina.com/image/d/36/3e8729c2168e374cb2f7060279c89.png" alt="导航设置"></p>
+
+<h3 id="">标签管理</h3>
+
+<p><img src="http://static.ghostchina.com/image/5/77/c2f930062e7a1c670a6548654eb28.png" alt="标签管理"></p>
+
+<h3 id="">植入代码</h3>
+
+<p><img src="http://static.ghostchina.com/image/2/69/595c3c12e613d6758d1136f4974d8.png" alt="植入代码"></p>
+
+<h3 id="">试验功能</h3>
+
+<p><img src="http://static.ghostchina.com/image/a/35/5ec08d52ec037da9cdf93b8eea856.png" alt="试验功能"></p>
+
+<h2 id="">登陆</h2>
+
+<p><img src="http://static.ghostchina.com/image/b/d5/9a46d2821dab7e0bf1440fd28ed24.png" alt="登陆"></p>
+
+<p>总的来说，后台 UI 稍显简单，欠缺设计感，有点像 <a href="http://www.bootcss.com/">Bootstrap</a> 的默认样式，而且某些 UI 组件有待优化。</p>]]></description>
+            <link>http://www.ghostchina.com/ghost-0-7-going-to-be-released-lets-preview/</link>
+            <guid isPermaLink="false">cb4d0c93-dcab-4527-92b1-04c994fbcd02</guid>
+            <category><![CDATA[Ghost]]></category>
+            <category><![CDATA[Ghost 0.7 版本]]></category>
+            <dc:creator><![CDATA[王赛]]></dc:creator>
+            <pubDate>Sun, 23 Aug 2015 10:43:26 GMT</pubDate>
+            <content:encoded><![CDATA[<p>Ghost 官方在 18 号的会议记录上透露了 Ghost 0.7 版本可能会在这个月底前发布，也就是说 Github 仓库里的代码不会有太大变化了。周末抽时间把 master 分支上的代码下载、编译、安装起来，截几张高清图，360 度无死角透视一下最新版的真面目吧！</p>
+
+<h2 id="">安装界面</h2>
+
+<h3 id="ghost">Ghost 欢迎您 :)</h3>
+
+<p><img src="http://static.ghostchina.com/image/b/72/d5dec6bbe8524be00f8529f513b16.png" alt="Ghost 欢迎您 :)"></p>
+
+<h3 id="">创建第一个账户，也就是博客的拥有者</h3>
+
+<p><img src="http://static.ghostchina.com/image/f/bd/53a2b223367c18942674babf07723.png" alt="创建第一个账户，也就是博客的拥有者"></p>
+
+<h3 id="">邀请好友组团开博</h3>
+
+<p><img src="http://static.ghostchina.com/image/e/63/2937a98938c019ecb09eb5252402f.png" alt="邀请好友组团开博"></p>
+
+<h2 id="">安装完毕，进入后台</h2>
+
+<h3 id="">后台全景布局</h3>
+
+<p><img src="http://static.ghostchina.com/image/4/93/88a5549e1c19e61e4e4777f3ff949.png" alt="后台全景布局"></p>
+
+<h3 id="">左侧功能栏可以隐藏</h3>
+
+<p><img src="http://static.ghostchina.com/image/6/14/af1bccddb1b73dc45dd800b51b49e.png" alt="左侧功能栏可以隐藏"></p>
+
+<h3 id="">博文编辑页</h3>
+
+<p><img src="http://static.ghostchina.com/image/6/32/0c11428d2077f9271209968c15c22.png" alt="博文编辑页"></p>
+
+<h3 id="">博文设置</h3>
+
+<p><img src="http://static.ghostchina.com/image/0/a3/0d9751155a20c2e8dd1c3e21eb52b.png" alt="博文设置"></p>
+
+<h3 id="">用户管理</h3>
+
+<p><img src="http://static.ghostchina.com/image/7/99/020f5c29e5d310e0e964180790ed3.png" alt="用户管理"></p>
+
+<h3 id="">用户资料管理</h3>
+
+<p><img src="http://static.ghostchina.com/image/c/99/39b1ae11459a7008002b71fb7dcbc.png" alt="用户资料管理"></p>
+
+<h3 id="">全局设置</h3>
+
+<p><img src="http://static.ghostchina.com/image/2/33/03b3006dd7aa76d916bc1d0a16eec.png" alt="全局设置"></p>
+
+<h3 id="">导航设置</h3>
+
+<p><img src="http://static.ghostchina.com/image/d/36/3e8729c2168e374cb2f7060279c89.png" alt="导航设置"></p>
+
+<h3 id="">标签管理</h3>
+
+<p><img src="http://static.ghostchina.com/image/5/77/c2f930062e7a1c670a6548654eb28.png" alt="标签管理"></p>
+
+<h3 id="">植入代码</h3>
+
+<p><img src="http://static.ghostchina.com/image/2/69/595c3c12e613d6758d1136f4974d8.png" alt="植入代码"></p>
+
+<h3 id="">试验功能</h3>
+
+<p><img src="http://static.ghostchina.com/image/a/35/5ec08d52ec037da9cdf93b8eea856.png" alt="试验功能"></p>
+
+<h2 id="">登陆</h2>
+
+<p><img src="http://static.ghostchina.com/image/b/d5/9a46d2821dab7e0bf1440fd28ed24.png" alt="登陆"></p>
+
+<p>总的来说，后台 UI 稍显简单，欠缺设计感，有点像 <a href="http://www.bootcss.com/">Bootstrap</a> 的默认样式，而且某些 UI 组件有待优化。后台功能没有太大变化。期待从这次 UI 重构开始，Ghost 能够加速功能开发。</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Ghost 0.7 版本将会带来哪些惊喜]]></title>
+            <description><![CDATA[<h2 id="">后台界面</h2>
+
+<p>首当其冲的就是后台 UI 的改变。</p>
+
+<p>从 Ghost 0.3.0 第一个公开发布的版本至今，Ghost 的后台 UI 一直都很简洁，顶部是一个黑底的导航条，三四个菜单项，底部是标签输入框，中间全是内容区域。如下图：</p>
+
+<p><img src="http://static.ghostchina.com/image/0/65/f0f540f80304ce8c740ea37876e73.png" alt=""></p>
+
+<p>但是随着 Ghost 功能越来越完善，越来越多，好多东西就“放不下了”，因此急需改变一下后台界面的布局，以便为将来的插件系统留出足够的扩展空间。</p>
+
+<p>“Zelda” － 这就是新 UI 的开发代号。长得怎么样？咱们先上图一窥究竟：</p>
+
+<p><img src="http://static.ghostchina.com/image/3/fe/b65dad5d1fe4d42f43daeeadf7e76.png" alt=""></p>
+
+<p>Zelda 将后台布局分成了三列，最左侧是功能列表或者叫菜单列表，最右侧是内容，中间是内容列表。这样布局很明显就是让将来新增的扩展在左侧一直往下排下去，根据每个扩展所对应的功能，右侧可以放置相应的内容。</p>
+
+<p>总的来说，和 Wordpress 正在趋同，越长越像了。下面我们看看 WP 4.2</p>]]></description>
+            <link>http://www.ghostchina.com/ghost-0-7-preview/</link>
+            <guid isPermaLink="false">7f044ae1-134b-482e-947d-6aa7e7751b7a</guid>
+            <category><![CDATA[Ghost]]></category>
+            <category><![CDATA[新版本发布]]></category>
+            <dc:creator><![CDATA[王赛]]></dc:creator>
+            <pubDate>Thu, 13 Aug 2015 15:59:40 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="">后台界面</h2>
+
+<p>首当其冲的就是后台 UI 的改变。</p>
+
+<p>从 Ghost 0.3.0 第一个公开发布的版本至今，Ghost 的后台 UI 一直都很简洁，顶部是一个黑底的导航条，三四个菜单项，底部是标签输入框，中间全是内容区域。如下图：</p>
+
+<p><img src="http://static.ghostchina.com/image/0/65/f0f540f80304ce8c740ea37876e73.png" alt=""></p>
+
+<p>但是随着 Ghost 功能越来越完善，越来越多，好多东西就“放不下了”，因此急需改变一下后台界面的布局，以便为将来的插件系统留出足够的扩展空间。</p>
+
+<p>“Zelda” － 这就是新 UI 的开发代号。长得怎么样？咱们先上图一窥究竟：</p>
+
+<p><img src="http://static.ghostchina.com/image/3/fe/b65dad5d1fe4d42f43daeeadf7e76.png" alt=""></p>
+
+<p>Zelda 将后台布局分成了三列，最左侧是功能列表或者叫菜单列表，最右侧是内容，中间是内容列表。这样布局很明显就是让将来新增的扩展在左侧一直往下排下去，根据每个扩展所对应的功能，右侧可以放置相应的内容。</p>
+
+<p>总的来说，和 Wordpress 正在趋同，越长越像了。下面我们看看 WP 4.2 系列的后台长相吧：</p>
+
+<p><img src="http://static.ghostchina.com/image/2/40/dc7bfcf99aa6781fdbb348fbfc426.png" alt=""></p>
+
+<p>呵呵，Ghost 和 Wordpress 都是博客（最后演变为全功能的 CMS）系统，因为功能趋同，很多操作方式、布局排布自然也会向 Wordpress 致敬。就像 Android 和 iOS 之间的关系。</p>
+
+<h2 id="api">开放的 API</h2>
+
+<p>凡是用过 Ghost，或者制作过模版的同学都体会到：Ghost 目前提供的 API 太少，可扩展性太低。的确是这样，Ghost 很多东西不完善，尤其是没有插件系统，直接导致很多功能不能由第三方来开发、完善，只能等 Ghost 官方来搞定。</p>
+
+<p>比如，<a href="http://www.ghostchina.com/">Ghost 中文网</a>所维护的<a href="http://www.ghostchina.com/download/">中文版</a>，为了支持第三方云存储，不得不修改 Ghost 内核；为了能够做一个“标签云”的功能，不得不自己开发一个 handlebars 助手。</p>
+
+<p>说了这些，你也别高兴太早哦，即将到来的 0.7 版本仍然没有完善插件系统，但是，这个版本将会提供一些公开访问的 API 出来，比如这次开放了一个功能更强的 <code>{{#get}}</code> 助手，能够自由调取博文列表，以后展示最新博之类的功能就方便了一些。</p>
+
+<h2 id="">最后</h2>
+
+<p>上面说的是 0.7 版本中比较突出的变化，当然，还有很多变化即将到来，有兴趣的同学可以看这里：<a href="https://github.com/TryGhost/Ghost/issues/5503">https://github.com/TryGhost/Ghost/issues/5503</a></p>
+
+<p>Ghost 0.7 仍然是值得期待的，我们也会看到 Ghost 变的越来越强大。</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Ghost 0.6.3 版本正式发布]]></title>
+            <description><![CDATA[<p><a href="http://www.ghostchina.com/download/">Ghost 0.6.3</a> 版本已经正式发布了！此版本主要修复了一些 bug 并包含了几个新特性，例如：博文预览。</p>
+
+<h2 id="ghost063">Ghost 0.6.3 的主要变化</h2>
+
+<ul>
+<li><strong>[新增]</strong> 博文预览</li>
+<li><strong>[新增]</strong> 带密码保护的私密博客</li>
+<li><strong>[新增]</strong> 为作者自定义页面模板</li>
+<li><strong>[增强]</strong> 登陆状态延长至 7 天</li>
+<li><strong>[修复]</strong> 编辑器的字数统计不统计非拉丁字符</li>
+<li><strong>[修复]</strong> RSS 输出 HTTPS 连接</li>
+<li><strong>[修复]</strong> 编辑器自动保存导致博文被发布</li>
+<li><strong>[修复]</strong> 当前被激活的主题不存时后台出错</li>
+</ul>
+
+<p><a href="https://gist.github.com/ErisDS/934f74b8d7f0bf75217b">完整更新日志在这里</a> 。</p>
+
+<h2 id="">下载地址</h2>
+
+<p><a href="http://www.ghostchina.com/download/">http://www.ghostchina.com/download/</a></p>
+
+<p><strong>注意：</strong> 从 Ghost 0.6.0 版本开始，</p>]]></description>
+            <link>http://www.ghostchina.com/ghost-0-6-3-released/</link>
+            <guid isPermaLink="false">9816d9fc-f7a7-434a-8269-a0ebb746937f</guid>
+            <category><![CDATA[Ghost]]></category>
+            <category><![CDATA[新版本发布]]></category>
+            <dc:creator><![CDATA[王赛]]></dc:creator>
+            <pubDate>Sun, 17 May 2015 19:30:05 GMT</pubDate>
+            <content:encoded><![CDATA[<p><a href="http://www.ghostchina.com/download/">Ghost 0.6.3</a> 版本已经正式发布了！此版本主要修复了一些 bug 并包含了几个新特性，例如：博文预览。</p>
+
+<h2 id="ghost063">Ghost 0.6.3 的主要变化</h2>
+
+<ul>
+<li><strong>[新增]</strong> 博文预览</li>
+<li><strong>[新增]</strong> 带密码保护的私密博客</li>
+<li><strong>[新增]</strong> 为作者自定义页面模板</li>
+<li><strong>[增强]</strong> 登陆状态延长至 7 天</li>
+<li><strong>[修复]</strong> 编辑器的字数统计不统计非拉丁字符</li>
+<li><strong>[修复]</strong> RSS 输出 HTTPS 连接</li>
+<li><strong>[修复]</strong> 编辑器自动保存导致博文被发布</li>
+<li><strong>[修复]</strong> 当前被激活的主题不存时后台出错</li>
+</ul>
+
+<p><a href="https://gist.github.com/ErisDS/934f74b8d7f0bf75217b">完整更新日志在这里</a> 。</p>
+
+<h2 id="">下载地址</h2>
+
+<p><a href="http://www.ghostchina.com/download/">http://www.ghostchina.com/download/</a></p>
+
+<p><strong>注意：</strong> 从 Ghost 0.6.0 版本开始，Ghost 中文版完整包已经集成了 Nodejs 0.12 版本的 sqlite3 原生库，在 windows（32/64 bit）、Linux（32/64 bit）、Mac（64 bit）操作系统上可以直接在 Nodejs 0.10.x 和 0.12.x 版本上运行。<strong>但是，我们强烈建议使用 Node.js 0.10.x 最新版本。对 Node.js 0.12.x 版本的支持还有待考验！</strong></p>
+
+<p><strong>关于 io.js</strong> ：目前 io.js 已经确定要合并到 nodejs 基金会了，将来会进一步融合两套代码，两个 node 平台并存的希望不大，建议大家还是用 Node.js 吧！ </p>
+
+<p><strong>强烈建议大家下载并使用 <a href="http://www.ghostchina.com/download/">Ghost 0.6.3</a> 中文版完整集成包，以免 <code>npm install --production</code> 安装依赖包时被墙！</strong></p>
+
+<p>如果你喜欢用英文版？可以下载 中文集成包 和 英文原版安装包，首先解压 中文版集成包，然后再解压 英文版安装包 覆盖 中文版 即可，两个版本完全兼容，任意切换，同时还能免去安装依赖包时被墙的麻烦。</p>
+
+<h2 id="">如何升级</h2>
+
+<p><strong>Ghost 非集成包升级：</strong> <a href="http://www.ghostchina.com/download/">下载 Ghost 0.6.3</a> 然后根据 <a href="http://support.ghost.org/how-to-upgrade">升级指南</a> 进行操作即可。如果你之前没有跟随 Ghost 版本进行升级，也没关系，只要你现在运行的是 0.5.x 版本就能直接升级到最新的 0.6.3 版本。</p>
+
+<p><strong>对于使用 Ghost 中文完整集成包的同学：</strong> 首先将 Ghost 0.6.3 完整包下载下来；然后进入当前所用 Ghost 的根目录下，将除了 <code>contents</code> 目录 和 <code>config.js</code> 文件之外的所有文件全部删除，然后解压新下载的 0.6.3 版本到此目录下即可（如果你在 Ghost 默认主题的基础上进行了修改，注意<strong>不要覆盖 <code>contents</code> 目录</strong>。 ）；最后重启 ghost 即可。</p>
+
+<h2 id="api">主题 API 的变化</h2>
+
+<p>Ghost 0.6.3 版本包含了两个重大的主题 API 增强。</p>
+
+<p>第一个就是可以为每位作者定制模板。也就是说你可以为昵称为 <code>hannah</code> 的作者添加一个命名为 <code>author-hannah.hbs</code> 的模板文件，Ghost 就会自动为此作者调用这个定制模板来展现作者相关信息和博文了。这一功能有利于为单个作者做出不同页面效果。</p>
+
+<p>第二，Ghost 0.6.3 增加了密码保护的特性，访问者要想访问你的博客就必须输入正确的密码，如果你的博客正在建设阶段不方便向大众开放的话，这一功能将非常有用。如果你开启了密码保护，所有访客都将被转至 <code>/private/</code> 地址，对应的页面只包含了一个密码输入框。</p>
+
+<p>新增的私密页面（输入密码的页面）拥有自己的 <a href="http://themes.ghost.org/docs/context-overview">context</a>。可以在你自己的主题中创建一个命名为 <code>private.hbs</code> 的模板进行定制。其中，<code>{{#is 'private'}}</code> 将被判断为 true， <code>{{body_class}}</code> 助手函数将输出 <code>private-template</code>。详细文档请参考 <a href="http://themes.ghost.org/docs/private-context">Ghost 主题文档</a>。</p>
+
+<h2 id="">致谢</h2>
+
+<p>This release was lovingly crafted by Jason Williams, Hannah Wolfe, Austin Burdine, John O'Nolan, Paul Adam Davis, Robert Jackson, Matt Enlow, Sebastian Gierlinger, Wilhansen Li, Adrian Estrada, lmoe, Alex Kleissner, Artyom Fedenko, David Balderston, Fabian Miiro and Harry Hope.</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Ghost 0.6.2 版本正式发布]]></title>
+            <description><![CDATA[<p>Ghost 0.6.2 主要是对 0.6.x 版本发布以来进行的 bug 修复。是否会问 0.6.1 版本去哪儿了？其实又被乌龙了，刚发布就发现有重大 bug，所以 0.6.2 成了救火的版本了。。。</p>
+
+<h2 id="">主要变化</h2>
+
+<ul>
+<li>[修复] 在 Ghost 后台，作者（author）无法访问自己的信息</li>
+<li>[修复] {{ghost_head}} 在自定义错误页面引起错误</li>
+<li>[修复] 博文发布按钮不能判断当前要发布的是“博文”还是“独立页面”</li>
+<li>[修复] {{author.email}} 作为敏感信息居然被暴露出来</li>
+<li>[修复] Casper: 版权信息和上/下一页布局问题</li>
+<li>[修复]</li></ul>]]></description>
+            <link>http://www.ghostchina.com/ghost-0-6-2-released/</link>
+            <guid isPermaLink="false">216ea42b-fe2c-43ba-a836-c7b1238eef11</guid>
+            <category><![CDATA[Ghost]]></category>
+            <category><![CDATA[新版本发布]]></category>
+            <dc:creator><![CDATA[王赛]]></dc:creator>
+            <pubDate>Sun, 26 Apr 2015 15:43:44 GMT</pubDate>
+            <content:encoded><![CDATA[<p>Ghost 0.6.2 主要是对 0.6.x 版本发布以来进行的 bug 修复。是否会问 0.6.1 版本去哪儿了？其实又被乌龙了，刚发布就发现有重大 bug，所以 0.6.2 成了救火的版本了。。。</p>
+
+<h2 id="">主要变化</h2>
+
+<ul>
+<li>[修复] 在 Ghost 后台，作者（author）无法访问自己的信息</li>
+<li>[修复] {{ghost_head}} 在自定义错误页面引起错误</li>
+<li>[修复] 博文发布按钮不能判断当前要发布的是“博文”还是“独立页面”</li>
+<li>[修复] {{author.email}} 作为敏感信息居然被暴露出来</li>
+<li>[修复] Casper: 版权信息和上/下一页布局问题</li>
+<li>[修复] Casper: 字体图标的缓存</li>
+<li>[修复] 获取前/后一篇博文的助手函数被弄丢了（就是这个乌龙）</li>
+<li>[修复] Casper: 文本样式问题</li>
+</ul>
+
+<p><a href="https://gist.github.com/ErisDS/ec92d2b54b114eb0fab9">这里可以查看文正的更新日志</a> 。</p>
+
+<h2 id="">下载地址</h2>
+
+<p><a href="http://www.ghostchina.com/download/">http://www.ghostchina.com/download/</a></p>
+
+<p><strong>注意：</strong> 从 Ghost 0.6.0 版本开始，Ghost 中文版完整包已经集成了 Nodejs 0.12 版本的 sqlite3 原生库，在 windows（32/64 bit）、Linux（32/64 bit）、Mac（64 bit）操作系统上可以直接在 Nodejs 0.10.x 和 0.12.x 版本上运行。<strong>但是，我们强烈建议使用 Node.js 0.10.x 最新版本。对 Node.js 0.12.x 版本的支持还有待考验！</strong></p>
+
+<p><strong>强烈建议大家下载并使用 <a href="http://www.ghostchina.com/download/">Ghost 0.6.2</a> 中文版完整集成包，免去 <code>npm install --production</code> 安装依赖包时被墙！</strong></p>
+
+<p>如果你喜欢用英文版？可以下载 中文集成包 和 英文原版安装包，首先解压 中文版集成包，然后再解压 英文版安装包 覆盖 中文版 即可，两个版本完全兼容，任意切换，同时还能免去安装依赖包时被墙。</p>
+
+<h2 id="">如何升级</h2>
+
+<p><strong>Ghost 非集成包升级：</strong> <a href="http://www.ghostchina.com/download/">下载 Ghost 0.6.2</a> 然后根据 <a href="http://support.ghost.org/how-to-upgrade">升级指南</a> 进行操作即可。如果你之前没有跟随 Ghost 版本进行升级，也没关系，只要你现在运行的是 0.5.x 版本就能直接升级到最新的 0.6.2 版本。</p>
+
+<p><strong>对于使用 Ghost 中文完整集成包的同学：</strong> 首先将 Ghost 0.6.2 完整包下载下来；然后进入当前所用 Ghost 的根目录下，将除了 <code>contents</code> 目录 和 <code>config.js</code> 文件之外的所有文件全部删除，然后解压新下载的 0.6.2 版本到此目录下即可（如果你在 Ghost 默认主题的基础上进行了修改，注意<strong>不要覆盖 <code>contents</code> 目录</strong>。 ）；最后重启 ghost 即可。</p>
+
+<h2 id="">致谢</h2>
+
+<p>This release was speedily crafted by Hannah Wolfe &amp; Sebastian Gierlinger</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Ghost 0.6.0 版本正式发布]]></title>
+            <description><![CDATA[<p><img src="http://static.ghostchina.com/image/e/de/f91c1b99eb3492b05ddc8043b58fd.png" alt="Ghost 0.6.0">
+<a href="https://github.com/TryGhost/Ghost/releases/tag/0.6.0">Ghost 0.6.0</a> 已经正式发布了！Github、npm、Ghost.org 和 GhostChina.com 上已经都可以下载了。Ghost 0.6.0 的代码有了很多改变，同时也增加了很多功能、修改了很多 bug。</p>
+
+<h2 id="">主要变化</h2>
+
+<ul>
+<li><strong>[新增]</strong> 编辑器增加了拼写检查（针对的是英文）</li>
+<li><strong>[新增]</strong> 手机端支持上传图片</li>
+<li><strong>[新增]</strong> 上一篇、下一篇导航助手</li>
+<li><strong>[新增]</strong> 插入代码功能定型，并支持代码高亮</li>
+<li><strong>[新增]</strong> 定制存储</li>
+<li><strong>[优化]</strong> RSS</li>
+<li><strong>[优化]</strong> 结构化数据</li>
+<li><strong>[修复]</strong> 子域名下导航菜单 bug</li>
+<li><strong>[修复]</strong> 博文标题和描述输出错误</li>
+<li><strong>[修复]</strong> @blog 助手在模板中的 bug</li>
+</ul>
+
+<p>这里是 <a href="https://gist.github.com/ErisDS/0a60eccf8638941f8ce5">完整的升级日志</a></p>]]></description>
+            <link>http://www.ghostchina.com/ghost-0-6-0-released/</link>
+            <guid isPermaLink="false">95a13a15-eb54-48bd-9497-542d8fc9d5b3</guid>
+            <category><![CDATA[Ghost]]></category>
+            <category><![CDATA[新版本发布]]></category>
+            <dc:creator><![CDATA[王赛]]></dc:creator>
+            <pubDate>Tue, 21 Apr 2015 05:22:25 GMT</pubDate>
+            <content:encoded><![CDATA[<p><img src="http://static.ghostchina.com/image/e/de/f91c1b99eb3492b05ddc8043b58fd.png" alt="Ghost 0.6.0">
+<a href="https://github.com/TryGhost/Ghost/releases/tag/0.6.0">Ghost 0.6.0</a> 已经正式发布了！Github、npm、Ghost.org 和 GhostChina.com 上已经都可以下载了。Ghost 0.6.0 的代码有了很多改变，同时也增加了很多功能、修改了很多 bug。</p>
+
+<h2 id="">主要变化</h2>
+
+<ul>
+<li><strong>[新增]</strong> 编辑器增加了拼写检查（针对的是英文）</li>
+<li><strong>[新增]</strong> 手机端支持上传图片</li>
+<li><strong>[新增]</strong> 上一篇、下一篇导航助手</li>
+<li><strong>[新增]</strong> 插入代码功能定型，并支持代码高亮</li>
+<li><strong>[新增]</strong> 定制存储</li>
+<li><strong>[优化]</strong> RSS</li>
+<li><strong>[优化]</strong> 结构化数据</li>
+<li><strong>[修复]</strong> 子域名下导航菜单 bug</li>
+<li><strong>[修复]</strong> 博文标题和描述输出错误</li>
+<li><strong>[修复]</strong> @blog 助手在模板中的 bug</li>
+</ul>
+
+<p>这里是 <a href="https://gist.github.com/ErisDS/0a60eccf8638941f8ce5">完整的升级日志</a>。</p>
+
+<p><strong>特别注意：</strong> Ghost 从 0.5.10 版本开始尝试兼容 Nodejs  0.12.x 版本，但是仍然不稳定，虽然在 nodejs 0.12 平台上大部分能够正常运行，但是，我们还是建议使用 nodejs 0.10.x 版本。</p>
+
+<h2 id="">下载地址</h2>
+
+<p><a href="http://www.ghostchina.com/download/">http://www.ghostchina.com/download/</a></p>
+
+<p><strong>注意：</strong> 从 Ghost 0.6.0 版本开始，Ghost 中文版完整包已经集成了 Nodejs 0.12 版本的 sqlite3 原生库，在 windows（32/64 bit）、Linux（32/64 bit）、Mac（64 bit）操作系统上可以直接在 Nodejs 0.10.x 和 0.12.x 版本上运行。</p>
+
+<p><strong>强烈建议大家下载并使用 Ghost 0.6.0 中文版完整集成包，免去 <code>npm install --production</code> 安装依赖包时被墙！</strong></p>
+
+<p>如果你喜欢用英文版？可以下载 中文集成包 和 英文原版安装包，首先解压 中文版集成包，然后再解压 英文版安装包 覆盖 中文版 即可，两个版本完全兼容，任意切换，同时还能免去安装依赖包时被墙。</p>
+
+<h2 id="">如何升级</h2>
+
+<p><strong>Ghost 非集成包升级：</strong> <a href="http://www.ghostchina.com/download/">下载 Ghost 0.6.0</a> 然后根据 <a href="http://support.ghost.org/how-to-upgrade">升级指南</a> 进行操作即可。如果你之前没有跟随 Ghost 版本进行升级，也没关系，只要你现在运行的是 0.5.x 版本就能直接升级到最新的 0.6.0 版本。</p>
+
+<p><strong>对于使用 Ghost 中文完整集成包的同学：</strong> 首先将 Ghost 0.6.0 完整包下载下来；然后进入当前所用 Ghost 的根目录下，将除了 <code>contents</code> 目录 和 <code>config.js</code> 文件之外的所有文件全部删除，然后解压新下载的 0.6.0 版本到此目录下即可（如果你在 Ghost 默认主题的基础上进行了修改，注意<strong>不要覆盖 <code>contents</code> 目录</strong>。 ）；最后重启 ghost 服务。</p>
+
+<h2 id="ghostapi">Ghost 主题 API 的改变</h2>
+
+<p>Ghost 0.6.0 总算把大家期待已久的提取上一篇、下一篇博文的助手函数搞定了，通过 {{#next_post}} 和 {{#prev_post}} 助手函数就可以实现自己需要的功能了。</p>
+
+<p>{{#next_post}} 和 {{#prev_post}} 是 block 级助手函数，在这两个助手函数开关标签之间可以输出博文的各种信息。Ghost 默认主题 Casper 已经支持这两个助手函数了，大家可以打开默认主题的文件自己翻看一下。</p>
+
+<h2 id="">致谢</h2>
+
+<p>This release was lovingly crafted by Hannah Wolfe, Matt Enlow, Jason Williams, John O'Nolan, Paul Adam Davis, cobbspur, Felix Rieseberg, baogechen, JonathanKryza, Blaine Bublitz, Ian Lopshire, Austin Burdine, Katie Fenn, Markus Siemens and Pascal Borreli.</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[如何使用 Ghost 博客系统]]></title>
+            <description><![CDATA[<blockquote>
+  <p>此系列教程已完成部分翻译。。。</p>
+</blockquote>
+
+<p>既然来到这里，说明你的 Ghost 博客已经运行起来了。祝贺你！下面我们就来说一说 Ghost 博客系统的详细使用方法吧：</p>
+
+<h2 id="">撰写博文</h2>
+
+<p>Ghost 和其他大部分博客平台不同，Ghost 博客平台的书写界面支持的是 <a href="http://daringfireball.net/projects/markdown/">Markdown</a> 语法。Markdown 是通过一些特殊字符来表示特定的文档格式的一种书写方式。Ghost 博客系统所支持的 Markdown 书写界面还能够直接上传图片！关于Markdown 和发布博文的详细说明请参考下面列出的文章吧：</p>
+
+<ul>
+<li><a href="http://support.ghost.org/how-to-publish-a-post/">如何发布一篇博文</a></li>
+<li><a href="http://support.ghost.org/markdown-guide/">Markdown 语法指南</a></li>
+<li><a href="http://support.ghost.org/add-image-post/">如何在博文中添加图片</a></li>
+<li><a href="http://www.ghostchina.com/publish-a-static-page/">如何发布一个独立页面</a>  （翻译完成）</li>
+</ul>
+
+<h2 id="">定制博客主题</h2>
+
+<p>Ghost 博客的主题很容易定制。你可以修改你的博客页面的布局、样式，甚至添加第三方的评论系统等功能。下面列出的教程讲解了如何定制博客主题：</p>
+
+<ul>
+<li><a href="http://support.ghost.org/ghost-themes-overview/">Ghost 博客主题概览</a></li>
+<li><a href="http://support.ghost.org/add-disqus-to-my-ghost-blog/">如何为 Ghost 博客添加 Disqus 评论功能</a></li>
+<li><a href="http://www.ghostchina.com/create-custom-page-template/">如何创建页面模板</a>  （翻译完成）</li>
+<li><a href="http://support.ghost.org/change-my-navigation-menu/">如何修改导航菜单</a></li>
+<li><a href="http://support.ghost.org/add-google-analytics-blog/">如何添加 Google 统计</a></li></ul>]]></description>
+            <link>http://www.ghostchina.com/how-to-use-ghost/</link>
+            <guid isPermaLink="false">5d103f55-735d-4fc3-b439-dd3abf67018e</guid>
+            <category><![CDATA[Ghost]]></category>
+            <dc:creator><![CDATA[王赛]]></dc:creator>
+            <pubDate>Tue, 21 Apr 2015 02:54:12 GMT</pubDate>
+            <content:encoded><![CDATA[<blockquote>
+  <p>此系列教程已完成部分翻译。。。</p>
+</blockquote>
+
+<p>既然来到这里，说明你的 Ghost 博客已经运行起来了。祝贺你！下面我们就来说一说 Ghost 博客系统的详细使用方法吧：</p>
+
+<h2 id="">撰写博文</h2>
+
+<p>Ghost 和其他大部分博客平台不同，Ghost 博客平台的书写界面支持的是 <a href="http://daringfireball.net/projects/markdown/">Markdown</a> 语法。Markdown 是通过一些特殊字符来表示特定的文档格式的一种书写方式。Ghost 博客系统所支持的 Markdown 书写界面还能够直接上传图片！关于Markdown 和发布博文的详细说明请参考下面列出的文章吧：</p>
+
+<ul>
+<li><a href="http://support.ghost.org/how-to-publish-a-post/">如何发布一篇博文</a></li>
+<li><a href="http://support.ghost.org/markdown-guide/">Markdown 语法指南</a></li>
+<li><a href="http://support.ghost.org/add-image-post/">如何在博文中添加图片</a></li>
+<li><a href="http://www.ghostchina.com/publish-a-static-page/">如何发布一个独立页面</a>  （翻译完成）</li>
+</ul>
+
+<h2 id="">定制博客主题</h2>
+
+<p>Ghost 博客的主题很容易定制。你可以修改你的博客页面的布局、样式，甚至添加第三方的评论系统等功能。下面列出的教程讲解了如何定制博客主题：</p>
+
+<ul>
+<li><a href="http://support.ghost.org/ghost-themes-overview/">Ghost 博客主题概览</a></li>
+<li><a href="http://support.ghost.org/add-disqus-to-my-ghost-blog/">如何为 Ghost 博客添加 Disqus 评论功能</a></li>
+<li><a href="http://www.ghostchina.com/create-custom-page-template/">如何创建页面模板</a>  （翻译完成）</li>
+<li><a href="http://support.ghost.org/change-my-navigation-menu/">如何修改导航菜单</a></li>
+<li><a href="http://support.ghost.org/add-google-analytics-blog/">如何添加 Google 统计</a></li>
+</ul>
+
+<h2 id="">接下来。。。</h2>
+
+<p>祝贺你！你已经初步掌握了 Ghost 博客的使用方法。如果你希望更深入了解 Ghost，请阅读下面的文章吧：</p>
+
+<ul>
+<li><a href="http://support.ghost.org/blog-settings-overview/">Ghost 博客设置概览</a></li>
+<li><a href="http://support.ghost.org/post-settings-overview/">博文设置概览</a></li>
+<li><a href="http://www.ghostchina.com/ghost-shortcuts">Ghost 快捷键</a>  （翻译完成）</li>
+</ul>
+
+<hr>
+
+<p>原文链接：<a href="http://support.ghost.org/how-to-use-ghost/">http://support.ghost.org/how-to-use-ghost/</a></p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[我们是“开源公司”]]></title>
+            <description><![CDATA[<blockquote>
+  <p>这篇博文是 Ghost 创始人 John O'Nolan 对开源和商业的深入思考和总结。</p>
+
+  <p>希望这篇译文对希望从事开源的同学有所裨益。</p>
+</blockquote>
+
+<p>长久以来，开源项目和商业公司之间的交集总是令我着迷。在很多方面，他们的理念完全背道而驰、不可调和。一个是完全由社区驱动的社会化产物；另一个完全是由竞争驱动的资本盛宴。</p>
+
+<p>然而，不知何故，他们走到一起，形成一个令人难以置信的强大、并拥有巨大影响力的联盟。</p>
+
+<p><strong>传统观念中形成了两种模式</strong>：支持开源项目的 <em>商业公司</em> 和商业运作的 <em>开源项目</em>。</p>
+
+<p><strong>Github</strong>、<strong>Twitter</strong> 和 <strong>Stripe</strong> 都是践行第一种模式的大型商业公司领域的优秀典范。他们的核心焦点是增长和营收，但是，他们将自己所使用的组件在开源社区中分享，同样获得了很大的成功。</p>
+
+<p>相反，<strong>Docker</strong>、<strong>WordPress</strong> 和 <strong>Ember.js</strong> 都是开源项目领域中的优秀典范，恰好他们背后都有商业公司的支持。他们的主要焦点是创造免费、开源的软件 － 产生营收是次要的或者是独立分开的。</p>
+
+<p><em>基于各自的组织结构，他们运作方式大不相同，但是都能大体归类到这两种模式当中</em>。</p>
+
+<p>让我感兴趣的是：基于各自所处的模式，从而反映到各自在商业和开源的道路上的不同方式。</p>]]></description>
+            <link>http://www.ghostchina.com/open-source-business/</link>
+            <guid isPermaLink="false">60635a4f-6367-460f-8f2b-1f142dd0918a</guid>
+            <category><![CDATA[开源]]></category>
+            <dc:creator><![CDATA[王赛]]></dc:creator>
+            <pubDate>Sat, 21 Mar 2015 02:48:59 GMT</pubDate>
+            <content:encoded><![CDATA[<blockquote>
+  <p>这篇博文是 Ghost 创始人 John O'Nolan 对开源和商业的深入思考和总结。</p>
+
+  <p>希望这篇译文对希望从事开源的同学有所裨益。</p>
+</blockquote>
+
+<p>长久以来，开源项目和商业公司之间的交集总是令我着迷。在很多方面，他们的理念完全背道而驰、不可调和。一个是完全由社区驱动的社会化产物；另一个完全是由竞争驱动的资本盛宴。</p>
+
+<p>然而，不知何故，他们走到一起，形成一个令人难以置信的强大、并拥有巨大影响力的联盟。</p>
+
+<p><strong>传统观念中形成了两种模式</strong>：支持开源项目的 <em>商业公司</em> 和商业运作的 <em>开源项目</em>。</p>
+
+<p><strong>Github</strong>、<strong>Twitter</strong> 和 <strong>Stripe</strong> 都是践行第一种模式的大型商业公司领域的优秀典范。他们的核心焦点是增长和营收，但是，他们将自己所使用的组件在开源社区中分享，同样获得了很大的成功。</p>
+
+<p>相反，<strong>Docker</strong>、<strong>WordPress</strong> 和 <strong>Ember.js</strong> 都是开源项目领域中的优秀典范，恰好他们背后都有商业公司的支持。他们的主要焦点是创造免费、开源的软件 － 产生营收是次要的或者是独立分开的。</p>
+
+<p><em>基于各自的组织结构，他们运作方式大不相同，但是都能大体归类到这两种模式当中</em>。</p>
+
+<p>让我感兴趣的是：基于各自所处的模式，从而反映到各自在商业和开源的道路上的不同方式。</p>
+
+<p><strong>支持开源项目的商业公司</strong> 是由商业驱动的。它们用自己的研发实力首先满足自身的需求。它们构建的产品是自身所需要的，然后免费分享出来，牺牲的是源码。如果只是为一种使用场景构建项目，一般无法创造一个大型社区或者吸引更多维护者。</p>
+
+<p><strong>商业运作的开源项目</strong>由社区运营的。它们的研发实力首先关注的是一系列广泛的应用场景，因此项目会传播的非常广。然后，单独细分出来一个应用场景用于商业化。牺牲的是其构建的商业化极其复杂。开发团队致力于满足非常多的应用场景时，专注并在一个应用场景上迭代变得非常困难。</p>
+
+<p>这两种模式基本上都是非常有效的，但是它们并非没有缺陷。当一个商业为主的公司牺牲开源项目的透明度和完整性时，就经常在开源社区中造成很现实的摩擦。但是，一个开源为主的项目把重心放到创造一个可持续发展的企业时，最后的结局往往是软件慢慢消亡或是毫无预兆的被出售。</p>
+
+<p><a href="https://ghost.org">Ghost</a> 所处的位置非常有趣，因为他无法套进这两种模式中。我们正在努力开创一个崭新的模式。</p>
+
+<p>我们是一家能自给自足的商业公司，同时也是一个非盈利性组织，公司的唯一目的就是支持我们的开源项目。由于两者是互相依存的，因此，他们的命运不可逆转的被捆绑在一起。在上面的例子中，商业公司和开源项目之间的利益永远处于冲突的状态，而在我们的模式中，他们是并行不悖的。</p>
+
+<p>当我们想要完成某件事情的时候，我们只是纯粹为了有利于开源社区，并且我们可以放手去做，因为没有来自股东关于投资承诺方面的抱怨。当我们想要做的事情纯粹是为了商业利益时，我们仍然可以放手去做，因为所有商业利润都会回馈到开源项目中并转而帮助社区的发展。</p>
+
+<p>因此，我们既不是支持开源项目的商业公司也不是商业运作的开源项目。</p>
+
+<p><strong>我们是 －－ 开源公司</strong>.</p>
+
+<hr>
+
+<p>原文地址：<a href="http://john.onolan.org/open-source-business/">http://john.onolan.org/open-source-business/</a></p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[禁止 `ghost_foot` 助手输出 jQuery 链接]]></title>
+            <description><![CDATA[<p>Ghost 提供了一个 <code>ghost_foot</code> 助手函数，用来在页面底部输出一些自定义的 JavaScript 代码。“插入自定义代码” 功能也需要这个助手函数才能起作用。但是，<code>ghost_foot</code> 助手默认每次都会默认输出一个指向自身目录下的 jQuery 文件的链接，如果我们使用了公共 CDN 加速服务（例如：<a href="http://www.bootcdn.cn/">BootCDN</a>）或者商业的 CDN 加速的话，每次都要加载一个本地文件势必影响页面加载速度。</p>
+
+<p>为了解决这个问题，我们提供的 <a href="http://www.ghostchina.com/download/">Ghost 中文版</a> 对 <code>ghost_foot</code> 助手进行了改进，提供了是否输出 jQuery 链接的开关。下面看一下怎么使用吧。</p>
+
+<h2 id="jquery"><code>jquery</code> 参数</h2>
+
+<p>在 <a href="http://www.ghostchina.com/download/">Ghost 中文版</a> 中，通过为 <code>ghost_foot</code> 添加 <code>jquery=false</code> 就可以禁止输出</p>]]></description>
+            <link>http://www.ghostchina.com/disable-jquery-link-in-ghost_foot-helper/</link>
+            <guid isPermaLink="false">b0ecfbd1-8a05-4ee9-9e2b-3bec88769378</guid>
+            <category><![CDATA[Ghost]]></category>
+            <category><![CDATA[深度玩转 Ghost]]></category>
+            <category><![CDATA[助手函数]]></category>
+            <dc:creator><![CDATA[王赛]]></dc:creator>
+            <pubDate>Wed, 04 Mar 2015 06:53:59 GMT</pubDate>
+            <content:encoded><![CDATA[<p>Ghost 提供了一个 <code>ghost_foot</code> 助手函数，用来在页面底部输出一些自定义的 JavaScript 代码。“插入自定义代码” 功能也需要这个助手函数才能起作用。但是，<code>ghost_foot</code> 助手默认每次都会默认输出一个指向自身目录下的 jQuery 文件的链接，如果我们使用了公共 CDN 加速服务（例如：<a href="http://www.bootcdn.cn/">BootCDN</a>）或者商业的 CDN 加速的话，每次都要加载一个本地文件势必影响页面加载速度。</p>
+
+<p>为了解决这个问题，我们提供的 <a href="http://www.ghostchina.com/download/">Ghost 中文版</a> 对 <code>ghost_foot</code> 助手进行了改进，提供了是否输出 jQuery 链接的开关。下面看一下怎么使用吧。</p>
+
+<h2 id="jquery"><code>jquery</code> 参数</h2>
+
+<p>在 <a href="http://www.ghostchina.com/download/">Ghost 中文版</a> 中，通过为 <code>ghost_foot</code> 添加 <code>jquery=false</code> 就可以禁止输出 jQeury，代码如下：</p>
+
+<pre><code class="language-handlebars">{{ghost_foot jquery=false}}
+</code></pre>
+
+<p>这样就不会输出 jQeury 了。而其他默认输出的内容都不会变。</p>
+
+<h2 id="">非中文版用户</h2>
+
+<p>对于没有使用 <a href="http://www.ghostchina.com/download/">Ghost 中文版</a> 的用户，可以提取 中文版 中的相应文件覆盖对应文件即可，文件路径如下：</p>
+
+<p><code>core/server/helpers/ghost_foot.js</code></p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[为博客增加“标签云”]]></title>
+            <description><![CDATA[<p>从 0.5.7 中文版开始我们就为 Ghost 增加了输出“标签云”的功能。下面就来看看如何使用。</p>
+
+<h2 id="tag_cloud">介绍一下 <code>tag_cloud</code></h2>
+
+<p>这是中文版中增加的一个 handlebars 助手（helper），根据标签所关联的文章数量进行逆排序，也就是关联文章多的先输出；支持一个 <code>limit</code> 参数，用于限定输出的标签数量：<code>all</code> 表示输出所有标签；数字（例如 10）指定输出个数。调用方式如下：</p>
+
+<pre><code class="language-handlebars">//输出所有标签
+{{tag_cloud limit="all"}}
+
+或者
+
+//输出前10个标签（标签按照对应的文章数量逆排序）
+{{tag_cloud limit=10}}
+</code></pre>
+
+<h2 id="">使用方法</h2>
+
+<p>在需要输出“标签云”的地方调用 <code>tag_cloud</code> 助手即可。我们以</p>]]></description>
+            <link>http://www.ghostchina.com/output-tag-cloud/</link>
+            <guid isPermaLink="false">c9115f59-e3c4-4941-b227-79729eb46b9d</guid>
+            <category><![CDATA[Ghost]]></category>
+            <category><![CDATA[深度玩转 Ghost]]></category>
+            <category><![CDATA[标签云]]></category>
+            <dc:creator><![CDATA[王赛]]></dc:creator>
+            <pubDate>Mon, 02 Mar 2015 06:46:50 GMT</pubDate>
+            <content:encoded><![CDATA[<p>从 0.5.7 中文版开始我们就为 Ghost 增加了输出“标签云”的功能。下面就来看看如何使用。</p>
+
+<h2 id="tag_cloud">介绍一下 <code>tag_cloud</code></h2>
+
+<p>这是中文版中增加的一个 handlebars 助手（helper），根据标签所关联的文章数量进行逆排序，也就是关联文章多的先输出；支持一个 <code>limit</code> 参数，用于限定输出的标签数量：<code>all</code> 表示输出所有标签；数字（例如 10）指定输出个数。调用方式如下：</p>
+
+<pre><code class="language-handlebars">//输出所有标签
+{{tag_cloud limit="all"}}
+
+或者
+
+//输出前10个标签（标签按照对应的文章数量逆排序）
+{{tag_cloud limit=10}}
+</code></pre>
+
+<h2 id="">使用方法</h2>
+
+<p>在需要输出“标签云”的地方调用 <code>tag_cloud</code> 助手即可。我们以 casper 默认主题为例。打开 <code>index.hbs</code> 文件，在 <code>&lt;/header&gt;</code> 标签后面添加 <code>{{tag_cloud limit=10}}</code> ，保存此文件、重启 Ghost、打开首页，看看是否输出了一堆标签。</p>
+
+<h2 id="tag_cloud">定制 <code>tag_cloud</code> 模板</h2>
+
+<p><code>tag_cloud</code> 默认加载的模板位于 <code>core/server/helpers/tpl/tag_cloud.hbs</code> ，找到并打开此文件，内容如下：</p>
+
+<pre><code class="language-handlebars">&lt;ul class="tag-cloud"&gt;
+    {{#foreach tags}}
+    &lt;a href="{{url}}" class="tag-item"&gt;{{name}}&lt;span class="post-count"&gt;{{post_count}}&lt;/span&gt;&lt;/a&gt;
+    {{/foreach}}
+&lt;/ul&gt;
+</code></pre>
+
+<blockquote>
+  <p><strong>变量说明：</strong></p>
+
+  <ul>
+  <li>tags 是自动传入模板的、包含所有标签对象的数组</li>
+  <li>url 标签对应页面的地址</li>
+  <li>name 标签名</li>
+  <li>post_count 标签所关联的文章数量</li>
+  </ul>
+</blockquote>
+
+<p>将  <code>core/server/helpers/tpl/tag_cloud.hbs</code> 文件复制一份到你的主题目录下面的 <code>partials</code> 目录下，然后根据你自己的页面风格修改 html 标签和 css 样式即可。</p>
+
+<h2 id="">有图有真相</h2>
+
+<p>Ghost 中文网首页右侧的标签列表就是很好的实例：</p>
+
+<p><img src="http://static.ghostchina.com/image/0/7e/cec12e164edaf461e735c19ca2a78.png" alt="标签云"></p>
+
+<h2 id="ghost">为英文版 Ghost 添加“标签云”输出</h2>
+
+<p>对于使用英文版 Ghgost 的同学（必须升级到 0.5.9 版本以上）只需从我们发布的中文版中复制如下两个文件：</p>
+
+<ol>
+<li><code>core/server/helpers/tpl/tag_cloud.hbs</code>  </li>
+<li><code>core/server/helpers/tag_cloud.js</code></li>
+</ol>
+
+<blockquote>
+  <p>2015.9.6 补充 <code>tag_cloud</code> 助手的注册方法。</p>
+</blockquote>
+
+<p>然后用编辑器打开你的 <code>core/server/helpers/index.js</code>  文件，分别为 <code>coreHelpers</code> 增加 <code>tag_cloud</code> 属性，已经通过 <code>registerAsyncThemeHelper</code> 注册 <code>tag_cloud</code> 助手即可。可以参考下面给出的文件照着改（提示：搜索 <code>tag_cloud</code> 字串，然后逐个复制／粘贴代码）：</p>
+
+<p><a href="https://github.com/ghostchina/Ghost-zh/blob/master/core/server/helpers/index.js">https://github.com/ghostchina/Ghost-zh/blob/master/core/server/helpers/index.js</a></p>]]></content:encoded>
+        </item>
+    </channel>
+</rss>

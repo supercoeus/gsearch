@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gsearch - 好用的Ghost博客jQuery搜索插件</title>
+    <meta name="author" content="Tobee">
+    <meta name="keywords" content="ghost搜索,ghost search,jquery.gsearch.js">
+    <meta name="description" content="gsearch是一款为Ghost量身打造的搜索插件，使Ghost轻松具有搜索功能。效果类似于SwifType，通过Ghost的RSS实现搜索功能。">
+    <link rel="stylesheet" type="text/css" href="//cdn.staticfile.org/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link rel="stylesheet" href="../dist/libs/remodal/remodal.min.css">
+    <link rel="stylesheet" href="../dist/libs/gsearch/css/jquery.gsearch.min.css">
+    <script>
+        if ( document.location.protocol === 'file:' ) {
+            alert('请在服务器环境下(如localhost)运行本示例');
+            window.close();
+        }
+    </script>
+    <!--[if IE]>
+    <script src="//cdn.staticfile.org/html5shiv/r29/html5.min.js"></script><![endif]-->
+</head>
+<body>
+<div id="container" class="container intro-effect-fadeout">
+    <header class="header">
+        <nav class="nav">
+            <a class="nav-btn search-toggle" href="#search"><i class="icons search"></i></a>
+            <a class="nav-btn" href="http://tobee.me" target="_blank">Home</a>
+        </nav>
+        <div class="bg-img"><img src="img/bg.jpg" alt=""></div>
+        <div class="title">
+            <h1>jquery.gsearch.js</h1>
+            <p class="subline">好用的 Ghost 博客 jQuery 搜索插件</p>
+            <p><iframe src="https://ghbtns.com/github-btn.html?user=itobee&type=follow&count=true" frameborder="0" scrolling="0" width="150px" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=itobee&repo=gsearch&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
+        </div>
+    </header>
+    <button class="trigger" data-info="使用教程"><img src="img/triger.svg"></button>
+    <article class="content">
+        <main>
+            <h3>简介</h3>
+            <p>Ghost是一款出色的开源博客平台，小巧，易用，专注于写作，而gsearch是一款为Ghost量身打造的搜索插件，使Ghost轻松具有搜索功能。效果类似于<a href="https://swiftype.com/" target="_blank">SwifType</a>，通过Ghost的RSS实现搜索功能，您可以访问：<a href="http://tobee.me/#search" target="_blank">http://tobee.me/#search</a> 体验效果。
+            </p>
+            <h3>依赖插件</h3>
+            <ul>
+                <li><a href="https://github.com/VodkaBears/Remodal" target="_blank">remodal</a></li>
+            </ul>
+            <h3>浏览器支持</h3>
+            <p>理论上支持所有现代浏览器，包括智能手机浏览器。未全面测试，如果发现兼容问题，请提交[issues](https://github.com/itobee/gsearch/issues)</a> 。
+            </p>
+            <h3>截图</h3>
+            <img src="../Screenshot.gif">
+            <h3>使用示例</h3>
+            <p><a href="https://github.com/itobee/gsearch/archive/master.zip">下载</a>最新版的gsearch，将<code>dist</code>文件夹下的<code>libs</code>和<code>partials</code>文件夹复制到当前主题的根目录下（如果遇到同名<b>文件夹</b>，覆盖即可），并在当前主题的<code>default.hbs</code>文件中添加如下代码： </p>
+            <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-cn&quot;&gt;
+&lt;head&gt;
+    ……
+    &lt;!-- CSS --&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/libs/remodal/remodal.min.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/libs/gsearch/css/jquery.gsearch.min.css&quot;&gt;
+    ……
+&lt;/head&gt;
+
+&lt;body&gt;
+    ……
+
+    &lt;!-- gsearch模板 --&gt;
+    {{> "gsearch"}}
+
+    &lt;!-- JS --&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.staticfile.org/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt; &lt;!-- 如果主题中未引入jQuery，请引入jQuery --&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/libs/remodal/remodal.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/libs/gsearch/js/jquery.gsearch.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+            <p>接下来，我们再通过如下代码调用插件即可使用：</p>
+            <pre>&lt;script&gt;
+$(document).one('opening', '.remodal', function () {
+    $('#search').gsearch();
+});
+&lt;/script&gt;</pre>
+            <p>以上示例使用了remodal弹层插件显示搜索信息，可以用其他插件代替，但是需要注意一点：<b>请勿对同一元素重复调用插件</b>。示例中使用jQuery的<code>.one()</code>方法来委托事件。
+        </p>
+            <h3>参数说明</h3>
+            <table>
+                <tr>
+                    <th>名称</th>
+                    <th>默认值</th>
+                    <th>类型</th>
+                    <th>说明</th>
+                </tr>
+                <tr>
+                    <td>show</td>
+                    <td>10</td>
+                    <td>Number</td>
+                    <td>每页显示条数</td>
+                </tr>
+                <tr>
+                    <td>excerpt</td>
+                    <td>120</td>
+                    <td>Number</td>
+                    <td>摘要的字符长度</td>
+                </tr>
+                <tr>
+                    <td>rss</td>
+                    <td>"/rss"</td>
+                    <td>String</td>
+                    <td>rss源的路径</td>
+                </tr>
+                <tr>
+                    <td>trigger</td>
+                    <td>"keyup"</td>
+                    <td>String</td>
+                    <td>搜索触发方式，可选值：keyup，enter</td>
+                </tr>
+            </table>
+            <p>您也可以通过<code>data-api</code>来配置插件，如<code>data-trigger="enter"</code>。</p>
+            <h3>开发</h3>
+            <p>gseach使用Gulp作为脚手架开发，如果您想对gsearch进行二次开发，参考以下操作：</p>
+            <pre>// 克隆源码
+git clone git://github.com/itobee/gseach.git
+cd gseach
+
+// 安装npm
+npm install
+
+// 启动服务
+gulp</pre>
+            <h3>更新日志</h3>
+            <ul class="timeline">
+                <li>
+                    <h3>
+                        <a href="https://github.com/itobee/gsearch/releases/tag/v0.9.0" target="_blank">v0.9.0</a>
+                    </h3>
+                    <p><em>2016-12-24</em></p>
+                    <p>gsearch v0.9.0 发布</p>
+                </li>
+            </ul>
+            <h3>Bug反馈</h3>
+            <p>请移步：<a href="https://github.com/itobee/gsearch/issues" target="_blank">https://github.com/itobee/gsearch/issues</a> 。
+            </p>
+            <h3>开源协议</h3>
+            <p><a href="https://github.com/itobee/gsearch/blob/gh-pages/LICENSE" target="_blank">MIT license</a> &copy; Tobee</p>
+        </main>
+    </article>
+</div>
+<div class="remodal" data-remodal-id="search" id="search" data-rss="rss/test.xml">
+    <div class="search-ghost">
+        <header class="search-header">
+            <input class="search-field" autocomplete="off" placeholder="请输入关键词..." data-content="keywords">
+            <i class="search-clear icon icon-clear" title="清空" data-content="clear"></i>
+        </header>
+        <div class="search-content" data-content="content">
+            <template>
+                {body}
+                <main class="search-body">
+                    {result}
+                    <article class="search-result">
+                        <h2 class="result-title">
+                            <a href="{link}">{title}</a>
+                        </h2>
+                        <p class="result-excerpt">{excerpt} ...</p>
+                        <div class="result-meta">
+                            <span>{author}</span> <span>{category}</span>
+                            <time class="result-date">{date}</time>
+                        </div>
+                    </article>
+                    {/result} {infos}
+                    <div class="search-infos">
+                        <a href="http://tobee.me/" target="_blank">
+                            <img src="../dist/libs/gsearch/images/no-face-man.png" width="100"> </a>
+                        <p>{info}</p>
+                    </div>
+                    {/infos}
+                </main>
+                {/body} {footer}
+                <footer class="search-footer">
+                    {query}
+                    <p class="search-query">通过 <b class="search-keyword">{keyword}</b> 共搜索到
+                        <b class="search-amount">{amount}</b> 篇文章</p>
+                    {/query}
+                    <div class="search-pagination">
+                        {prev}
+                        <a class="pagination-link prev" data-page="{page}"><i class="icon icon-prev"></i></a> {/prev} {pages}
+                        <a class="pagination-link active" data-page="{page}">{page}</a> {/pages} {next}
+                        <a class="pagination-link next" data-page="{page}"><i class="icon icon-next"></i></a> {/next}
+                    </div>
+                </footer>
+                {/footer}
+            </template>
+        </div>
+    </div>
+</div>
+<script src="//cdn.staticfile.org/highlight.js/9.8.0/highlight.min.js"></script>
+<script src="//cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/demo.js"></script>
+<script src="../dist/libs/remodal/remodal.min.js"></script>
+<script src="../dist/libs/gsearch/js/jquery.gsearch.min.js"></script>
+<script>
+    $(function () {
+        $('pre').each(function (i, e) {
+            hljs.highlightBlock(e);
+        });
+    });
+    $(document).one('opening', '.remodal', function () {
+        $('#search').gsearch();
+    });
+</script>
+</body>
+</html>

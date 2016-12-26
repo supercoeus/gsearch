@@ -1,0 +1,311 @@
+/*!
+ * jquery.gsearch.css @VERSION
+ * https://github.com/itobee/ghost-search
+ *
+ * Licensed under the MIT license.
+ * https://github.com/itobee/gsearch/blob/gh-pages/LICENSE
+ *
+ * Copyright 2016, Tobee
+ * http://tobee.me
+ */
+
+// Namespace
+@search: search-ghost;
+
+// Fonts
+@icon-font-path: '../fonts';
+@icon-font-family: 'icon';
+
+// Color
+@base-color: #3A4145;
+@link-color: #0089d7;
+@border-color: #E7EEF2;
+@bg-color: #F0F4F7;
+@light-color: #9EABB3;
+@hightlight-color: #EF2F11;
+@header-animation-bg: #ADDDFF;
+@header-focus-animation-bg: #0083E3;
+
+// Height
+@main-height: 60vh;
+@header-height: 60px;
+@footer-height: 50px;
+@min-hegiht: 360px;
+
+// Padding
+@base-padding: 20px;
+
+// Media
+@screen-small-wdith: 500px;
+@screen-small-main-height: 80vh;
+
+@font-face {
+    font-family: @icon-font-family;
+    src: url('@{icon-font-path}/icons.eot');
+    src: url('@{icon-font-path}/icons.eot#iefix') format('embedded-opentype'),
+    url('@{icon-font-path}/icons.woff') format('woff'),
+    url('@{icon-font-path}/icons.ttf') format('truetype'),
+    url('@{icon-font-path}/icons.svg#icon') format('svg');
+}
+
+.@{search} {
+    font-family: 'Helvetica Neue', 'Helvetica', tahoma, 'Hiragino Sans GB', 'PingFang SC', 'STHeitiSC-Light', 'Microsoft YaHei', Arial, sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: @base-color;
+    height: @main-height;
+    min-height: @min-hegiht;
+
+    @media (max-width: @screen-small-wdith) {
+        height: @screen-small-main-height;
+    }
+
+    * { // reset
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: @link-color;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .icon { // 图标
+        line-height: 1;
+        &:before {
+            font-family: @icon-font-family !important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        &-clear:before {
+            content: "\e601";
+        }
+
+        &-next:before {
+            content: "\e662";
+        }
+
+        &-prev:before {
+            content: "\e663";
+        }
+    }
+
+    .search-header { //顶部
+        position: relative;
+        height: @header-height;
+
+        &:before,
+        &:after {
+            position: absolute;
+            display: block;
+        }
+        &:before {
+            font-family: @icon-font-family !important;
+            content: "\e660";
+            left: @base-padding;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color: @light-color;
+        }
+        &:after {
+            content: " ";
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background: @header-animation-bg;
+            transition: all 1s;
+        }
+
+        &.focus:after {
+            background: @header-focus-animation-bg;
+            width: 100%;
+        }
+
+        .search-clear {
+            position: absolute;
+            right: @base-padding;
+            top: 50%;
+            transform: translateY(-50%);
+            right: @base-padding;
+            display: none;
+            color: @light-color;
+            cursor: pointer;
+
+            :hover {
+                color: @base-color;
+            }
+        }
+
+        .search-field {
+            border: none;
+            width: 100%;
+            height: @header-height;
+            font-size: 14px;
+            margin: 0;
+            border-radius: 0;
+            padding: 0 50px 0;
+            box-sizing: border-box;
+            border-bottom: solid 1px @border-color;
+            background: @bg-color;
+            outline: none;
+
+            &::-webkit-input-placeholder {
+                color: @light-color;
+            }
+            &:-moz-placeholder {
+                color: @light-color;
+            }
+            &::-moz-placeholder {
+                color: @light-color;
+            }
+            &:-ms-input-placeholder {
+                color: @light-color;
+            }
+        }
+
+    }
+
+    .search-content {
+        height: %(~"calc(100% - %d)", @header-height);
+
+        .search-body { // 主体部分
+            padding: @base-padding;
+            height: %(~"calc(100% - %d)", @footer-height);
+            box-sizing: border-box;
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            .search-result {
+                border-bottom: solid 1px @border-color;
+                padding: 10px 0;
+
+                &:first-child {
+                    padding-top: 0;
+                }
+                &:last-child {
+                    padding-bottom: 0;
+                    border-bottom: 0;
+                }
+
+                .result-title {
+                    font-size: 14px;
+                    line-height: 1;
+                    white-space: nowrap;
+                    width: 60%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin: 0;
+                }
+
+                .result-excerpt {
+                    font-size: 12px;
+                    margin: 10px 0 6px;
+                    line-height: 1.6;
+                    word-break:break-all;
+                    text-justify: auto;
+                    text-align: justify;
+                }
+
+                .result-meta {
+                    font-size: 10px;
+                    line-height: 1;
+                    color: @light-color;
+
+                    span:not(:empty) {
+                        margin-right: 2px;
+                        &:after {
+                            margin-left: 5px;
+                            content: "-";
+                        }
+                    }
+                }
+
+                em {
+                    color: @hightlight-color;
+                    font-style: normal;
+                }
+            }
+
+            .search-infos {
+                position: relative;
+                top: 50%;
+                text-align: center;
+                transform: translateY(-50%);
+                font-size: 14px;
+                color: @light-color;
+
+                img {
+                    border-radius: 50%;
+                    margin-bottom: 20px;
+                    border: solid 3px @border-color;
+                    opacity: .8;
+                    transition: all .5s;
+
+                    &:hover {
+                        border-color: #adddff;
+                        opacity: 1;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+        }
+
+        .search-footer { //底部
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-top: solid 1px @border-color;
+            background: @bg-color;
+            padding: 0 @base-padding;
+            font-size: 12px;
+            height: @footer-height;
+            line-height: @footer-height;
+            vertical-align: middle;
+            box-sizing: border-box;
+
+            .search-query {
+                color: @light-color;
+                float: left;
+
+                b {
+                    color: darken(@light-color, 10%);
+                }
+
+                @media (max-width: @screen-small-wdith) {
+                    display: none;
+                }
+            }
+
+            .search-pagination {
+                float: right;
+                font-size: 12px;
+
+                a {
+                    margin: 0 3px;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    &.active {
+                        color: @light-color;
+                        cursor: default;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
