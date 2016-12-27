@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="../dist/libs/remodal/remodal.min.css">
     <link rel="stylesheet" href="../dist/libs/gsearch/css/jquery.gsearch.min.css">
     <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?ca15ab8c7bccb03fbf7e6127679cf3b7";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
         if ( document.location.protocol === 'file:' ) {
             alert('请在服务器环境下(如localhost)运行本示例');
             window.close();
